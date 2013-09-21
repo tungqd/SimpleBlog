@@ -14,7 +14,7 @@ session_start();
 //controllers available for application
 $controllers_available = array("main","login","blog");
 
-//deciding the controller to be run
+//decide the controller to be run
 if(isset($_GET['c']) && in_array($_GET['c'],$controllers_available)){
 	$controller = $_GET['c'];
 	}
@@ -39,7 +39,7 @@ function login(){
 }
 
 function statistics(){
-	include("./controllers/statistics.php");
+	include("./controllers/blog.php");
 	blog_controller();
 	displayView($_SESSION['viewname']);
 }

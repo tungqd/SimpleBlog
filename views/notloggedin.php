@@ -5,6 +5,7 @@
 
 <div id="newest" style="height:200px;width:700px;float:left;">
     <b>Most recent entry</b>
+<?php echo $data["title"];?>
 </div>
 
 <div id="list" style="height:200px;width:400px;float:right;">

@@ -1,12 +1,3 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Welcome to Simple Blog!</title>
-</head>
-<body>
-
-
 <form action="login.php" method="GET">
     <input type="button" value="Login" >
 </form>
@@ -20,7 +11,3 @@
     Entry list</div>
 
 
-
-
-</body>
-</html>

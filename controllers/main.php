@@ -30,7 +30,7 @@ function main_controller(){
 		while (!feof ($filehandle) {
 			if ($count=0) { 
 	}	*/
-	$data = array('title' => $title, 'content' => $content);
+	global $data = array('title' => $title, 'content' => $content);
 	displayView("notloggedin");
 	}
 	

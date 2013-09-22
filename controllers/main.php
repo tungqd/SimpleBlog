@@ -18,7 +18,19 @@ function main_controller(){
 	
 	include("./models/entry.php");
 	// Call function in models/entry.php to read data stored in the entries folder
-	//get_entries();
+	$filehandlers = getEntry();
+	$name = '';
+	$comment = '';
+	$count = 0;
+	$title = fgets($filehandlers[0]);
+	$content = fgets($filehandlers[0]);
+	/*
+	for ($i=1; $i < count($filehandlers); $i++) {
+		$count = 0;
+		while (!feof ($filehandle) {
+			if ($count=0) { 
+	}	*/
+	$data = array('title' => $title, 'content' => $content);
 	displayView("notloggedin");
 	}
 	

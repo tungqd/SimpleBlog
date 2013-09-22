@@ -2,13 +2,14 @@
 /**
 * index.php
 *
-* This file acts as entry point and call appropriate controllers.
+* This file acts as entry point and calls appropriate controllers.
 *
 * @author   Tung Dang, Loc Dang, Khanh Nguyen
 *
 *
 */
 
+/*
 session_start();
 
 //controllers available for application
@@ -38,17 +39,24 @@ function login(){
 	displayView($_SESSION['viewname']);
 }
 
-function statistics(){
+function blog(){
 	include("./controllers/blog.php");
 	blog_controller();
 	displayView($_SESSION['viewname']);
 }
+*/
+//Require the main controller and run it to get the most recent entry
 
+
+require("./controllers/main.php");
+main_controller();
+
+//displayView renders and displays specific view
 function displayView($viewname){
 
-?>
+//?>
 
-<?php echo '<?xml version ="1.1" encoding="utf-8" ?>'; ?>
+
 <!DOCTYPE html  PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
@@ -64,7 +72,7 @@ function displayView($viewname){
 </head>
 <body>
 
-<?php include("./views/{$viewname}.php"); ?>
+	<?php include("./views/{$viewname}.php"); ?>
 
 </body>
 </html>

@@ -8,4 +8,7 @@
 *
 *
 */
+function blog_controller(){
+		
+		}
 ?>

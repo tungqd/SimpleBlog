@@ -9,30 +9,41 @@
 *
 *
 */
+
+$data;//global variable $data
 session_start();
-$data; //global variable $data
+
 $controllers_avaliable= array('main','login');
 
 
 function main_controller(){
-	
+	global $data;
 	include("./models/entry.php");
 	// Call function in models/entry.php to read data stored in the entries folder
 	$filehandlers = getEntry();
 	$name = '';
 	$comment = '';
 	$count = 0;
+	//handle blog.txt
 	$title = fgets($filehandlers[0]);
-	$content = fgets($filehandlers[0]);
-	/*
-	for ($i=1; $i < count($filehandlers); $i++) {
-		$count = 0;
-		while (!feof ($filehandle) {
-			if ($count=0) { 
-	}	*/
-	global $data = array('title' => $title, 'content' => $content);
+	while (!feof($filehandlers[0])) {
+	
+		$content .= fgets($filehandlers[0]).'<br>';
+	}
+	$data = array("title" => $title,"content" => $content);
+	
+	//handle comments
+	for ($i = 1; $i < count($filehandlers); $i++) {
+		$name = fgets($filehandlers[$i]);
+		while (!feof($filehandlers[$i])) {
+			$comment .= fgets($filehandlers[$i]).'<br>';
+			}
+		$data['name'.$i] = ($name);
+		$data['comment'.$i] = ($comment);
+	}
 	displayView("notloggedin");
 	}
+
 	
 function login(){
 	include("./controllers/login.php");

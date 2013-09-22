@@ -9,42 +9,7 @@
 *
 */
 
-/*
-session_start();
 
-//controllers available for application
-$controllers_available = array("main","login","blog");
-
-//decide the controller to be run
-if(isset($_GET['c']) && in_array($_GET['c'],$controllers_available)){
-	$controller = $_GET['c'];
-	}
-	
-else{
-	$controller = "main";
-}
-
-//function pointer to call the controller
-$controller();
-
-function main(){
-	include("./controllers/main.php");
-	main_controller();
-	displayView("notloggedin");
-}
-
-function login(){
-	include("./controllers/login.php");
-	login_controller();
-	displayView($_SESSION['viewname']);
-}
-
-function blog(){
-	include("./controllers/blog.php");
-	blog_controller();
-	displayView($_SESSION['viewname']);
-}
-*/
 //Require the main controller and run it to get the most recent entry
 
 
@@ -53,10 +18,7 @@ main_controller();
 
 //displayView renders and displays specific view
 function displayView($viewname){
-
-//?>
-
-
+?>
 <!DOCTYPE html  PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
@@ -76,7 +38,6 @@ function displayView($viewname){
 
 </body>
 </html>
-
 <?php
 }
 ?>

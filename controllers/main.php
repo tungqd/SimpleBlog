@@ -9,7 +9,9 @@
 *
 *
 */
+session_start();
 $data; //global variable $data
+$controllers_avaliable= array('main','login');
 
 
 function main_controller(){
@@ -20,5 +22,15 @@ function main_controller(){
 	displayView("notloggedin");
 	}
 	
+function login(){
+	include("./controllers/login.php");
+	login_controller();
+	displayView($_SESSION['viewname']);
+}
 
+function blog(){
+	include("./controllers/blog.php");
+	blog_controller();
+	displayView($_SESSION['viewname']);
+}
 ?>

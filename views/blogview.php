@@ -14,6 +14,7 @@
         Comment<input type="text" name="comment"/>
         <form action="index.php" method="POST">
 			<input type="hidden" name="c" value="main">
+			<input type="hidden" name="a" value="main">
 			<input type="hidden" name="view" value="blogview">
     		<input type="submit" value="Submit comment">
     	</form>

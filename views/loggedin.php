@@ -12,6 +12,11 @@
 </form>
 
 
+<form action="index.php" method="GET">
+	<input type="hidden" name="c" value="main">
+	<input type="hidden" name="view" value="notloggedin">
+    <input type="submit" value="Logout">
+</form>
 <div id="newest" style="height:200px;width:700px;float:left;">
     <b>Most recent entry</b>
 </div>

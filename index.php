@@ -33,8 +33,11 @@ function displayView($viewname){
 <link rel="stylesheet" type="text/css" href="./css/styles.css" />
 </head>
 <body>
-
-	<?php include("./views/{$viewname}.php"); ?>
+	
+	<?php 
+		global $data;
+		include("./views/{$viewname}.php"); 
+	?>
 
 </body>
 </html>

@@ -14,7 +14,7 @@
 
 
 require("./controllers/main.php");
-main_controller();
+mainController();
 
 //displayView renders and displays specific view
 function displayView($viewname){

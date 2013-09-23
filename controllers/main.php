@@ -13,17 +13,28 @@
 $data;//global variable $data
 session_start();
 
-$controllers_avaliable= array('main','login');
+$controllers_available= array('main','login');
 
-
-function main_controller(){
-	global $data;
+/**
+* mainController reads data from entries folder then processes the data
+*
+*/
+function mainController(){
+	//global $data;
 	include("./models/entry.php");
 	// Call function in models/entry.php to read data stored in the entries folder
 	$filehandlers = getEntry();
-	$name = '';
-	$comment = '';
-	$count = 0;
+	processEntry($filehandlers);
+	displayView("notloggedin");
+	}
+
+/**
+*	processEntry processes filehandlers return from entry.php and renders to $data global
+*
+*/	
+function processEntry($filehandlers) {
+	global $data;
+	
 	//handle blog.txt
 	$title = fgets($filehandlers[0]);
 	while (!feof($filehandlers[0])) {
@@ -38,13 +49,15 @@ function main_controller(){
 		while (!feof($filehandlers[$i])) {
 			$comment .= fgets($filehandlers[$i]).'<br>';
 			}
-		$data['name'.$i] = ($name);
-		$data['comment'.$i] = ($comment);
+		$data['name'.$i] = $name;
+		$data['comment'.$i] = $comment;
+		
+		//reset name and comment for the next file
+		$name = '';
+		$comment = '';
 	}
-	displayView("notloggedin");
-	}
+}
 
-	
 function login(){
 	include("./controllers/login.php");
 	login_controller();

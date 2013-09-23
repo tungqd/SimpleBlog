@@ -4,8 +4,9 @@
     <input type="hidden" name="e" value="timestamp">
 </form>
 
+
 <form action="login.php" method="GET">
-    <input type="button" value="Login" >
+    <input type="submit" value="Login" >
 </form>
 
 

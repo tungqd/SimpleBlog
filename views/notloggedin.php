@@ -12,7 +12,7 @@
     
 
 
-<div id="newest" style="height:200px;width:700px;float:left;">
+<div id="newest">
     <b>Most recent entry<br></b>
 
     <?php 
@@ -27,7 +27,7 @@
 
 </div>
 
-<div id="list" style="height:200px;width:400px;float:right;">
+<div id="list">
     <b>Entry list<br></b>
     <?php echo $data['title'].'<br>'; ?>
 </div>

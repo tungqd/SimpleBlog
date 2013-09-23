@@ -9,7 +9,7 @@
 *
 */
 
-function login_controller(){
+function loginController(){
 		
 		}
 ?>

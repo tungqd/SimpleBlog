@@ -8,7 +8,7 @@
 *
 *
 */
-function blog_controller(){
+function blogController(){
 		
 		}
 ?>

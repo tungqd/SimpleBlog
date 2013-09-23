@@ -11,9 +11,7 @@
 */
 
 $data;//global variable $data
-session_start();
 
-$controllers_available= array('main','login');
 
 /**
 * mainController reads data from entries folder then processes the data
@@ -24,9 +22,17 @@ function mainController(){
 	include("./models/entry.php");
 	// Call function in models/entry.php to read data stored in the entries folder
 	$filehandlers = getEntry();
-	processEntry($filehandlers);
-	displayView("notloggedin");
-	}
+	processEntry($filehandlers);	
+	if("notloggedin"==$_GET['view']){
+			$_SESSION['view'] = "notloggedin";
+		}
+	else if ("loggedin" == $_GET['view']){
+			$_SESSION['view'] = "loggedin";
+		}
+	else {
+			$_SESSION['view'] = "blog";
+		}	
+}
 
 /**
 *	processEntry processes filehandlers return from entry.php and renders to $data global
@@ -56,17 +62,5 @@ function processEntry($filehandlers) {
 		$name = '';
 		$comment = '';
 	}
-}
-
-function login(){
-	include("./controllers/login.php");
-	login_controller();
-	displayView($_SESSION['viewname']);
-}
-
-function blog(){
-	include("./controllers/blog.php");
-	blog_controller();
-	displayView($_SESSION['viewname']);
 }
 ?>

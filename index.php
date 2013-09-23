@@ -10,11 +10,45 @@
 */
 
 
+session_start();
+$controllers_available= array('main','login','blog');
+
 //Require the main controller and run it to get the most recent entry
+//require("./controllers/main.php");
+//mainController();
 
+//deciding the controller to be run
+if(isset($_GET['c']) && in_array($_GET['c'],$controllers_available)){
+	if("main"==$_GET['c']){
+		$controller = "main";
+	}
+	else{
+		$controller = $_GET['c'];
+	}
+}
+else{
+	$controller = "main";
+}
 
-require("./controllers/main.php");
-mainController();
+//function pointer to call the controller
+$controller();
+
+function main(){
+	require("./controllers/main.php");
+	mainController();
+	displayView('notloggedin');
+}
+function login(){
+	include("./controllers/login.php");
+	loginController();
+	displayView($_SESSION['view']);
+}
+
+function blog(){
+	include("./controllers/blog.php");
+	blogController();
+	displayView($_SESSION['view']);
+}
 
 //displayView renders and displays specific view
 function displayView($viewname){

@@ -1,11 +1,8 @@
 <form 
-    <input type="hidden" name="c" value="main.php">
-    <input type="hidden" name="view" value="notloggedin.php">
+    <input type="hidden" name="c" value="main">
+    <input type="hidden" name="view" value="notloggedin">
     <input type="hidden" name="e" value="timestamp">
 </form>
-
-
-
 
 <div id="newest">
     <b>Most recent entry<br></b>
@@ -28,6 +25,7 @@
 
 <div id="list">
     <b>Entry list<br></b>
+    
     <?php echo $data['title'].'<br>'; ?>
 </div>
 

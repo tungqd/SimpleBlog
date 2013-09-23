@@ -1,4 +1,7 @@
 <form action="login.php" method="GET">
+    <input type="hidden" name="v" value="view">
+    <input type="hidden" name="c" value="controller">
+    <input type="hidden" name="e" value="timestamp">
     <input type="button" value="Login" >
 </form>
 

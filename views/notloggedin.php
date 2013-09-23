@@ -16,7 +16,6 @@
     <b>Most recent entry<br></b>
 
     <?php 
-
     	echo $data['title'].'<br>';
     	echo $data['content'].'<br>';
     	echo $data['name1'].'<br>';

@@ -9,7 +9,7 @@ body {
 #newest
 {
 height:200px;
-width:700px;
+width:500px;
 float:left;
 }
 

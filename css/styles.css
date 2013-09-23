@@ -6,14 +6,14 @@ body {
   font-family: "Helvetica Neue", Helvetica;
 }
 
-div #newest
+#newest
 {
 height:200px;
 width:700px;
 float:left;
 }
 
-div #list
+#list
 {
 height:200px;
 width:400px;

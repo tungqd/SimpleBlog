@@ -10,13 +10,13 @@
 *
 */
 session_start();
-$data; //global variable $data
+$data = "testing"; //global variable $data
 $controllers_avaliable= array('main','login');
 
 
 function main_controller(){
-	
-	include("./models/entry.php");
+
+	require "//models/entry.php" ;
 	// Call function in models/entry.php to read data stored in the entries folder
 	//get_entries();
 	displayView("notloggedin");

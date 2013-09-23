@@ -13,7 +13,7 @@
 //Require the main controller and run it to get the most recent entry
 
 
-require("./controllers/main.php");
+require "/SimpleBlog/controllers/main.php";
 main_controller();
 
 //displayView renders and displays specific view

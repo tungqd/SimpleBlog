@@ -40,6 +40,8 @@ function mainController(){
 */	
 function processEntry($filehandlers) {
 	global $data;
+	$name ='';
+	$comment ='';
 	
 	//handle blog.txt
 	$title = fgets($filehandlers[0]);

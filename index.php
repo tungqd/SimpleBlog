@@ -12,14 +12,8 @@
 
 //Require the main controller and run it to get the most recent entry
 
-
-<<<<<<< HEAD
-require "/SimpleBlog/controllers/main.php";
-main_controller();
-=======
 require("./controllers/main.php");
 mainController();
->>>>>>> 69acedc080bf3676897ad5262e07f2838a006bca
 
 //displayView renders and displays specific view
 function displayView($viewname){

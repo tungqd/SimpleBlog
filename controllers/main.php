@@ -14,10 +14,7 @@ $data;//global variable $data
 session_start();
 <<<<<<< HEAD
 $data = "testing"; //global variable $data
-=======
 
-<<<<<<< HEAD
->>>>>>> 28ec43e2f3a63a31cbfc84df4165551227ca8a07
 $controllers_avaliable= array('main','login');
 
 

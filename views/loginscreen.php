@@ -12,8 +12,10 @@
 		<input type="hidden" name="c" value="login">
 		<input type="hidden" name="view" value="loggedin">
     	<input type="submit" value="Login">
+    	<input type="reset" value="Cancel">
     </form>
-    <input type="reset" value="Cancel"/>
+    
+    
 </form>
 
 

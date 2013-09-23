@@ -1,5 +1,5 @@
 <form 
-    <input type="hidden" name="c" value="main.php">
+    <input type="hidden" name="c" value="login.php">
     <input type="hidden" name="v" value="loginscreen.php">
     <input type="hidden" name="e" value="timestamp">
 </form>

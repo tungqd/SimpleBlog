@@ -13,3 +13,4 @@ function loginController(){
 	$_SESSION['view']=('loginscreen');
 }
 ?>
+

@@ -4,7 +4,7 @@
     <input type="hidden" name="e" value="timestamp">
 </form>
 
-<form action="blog.php" method="POST">
+<form action="blog.php" method="GET">
     <input type="button" value="Add new entry" >
 </form>
 

@@ -13,10 +13,6 @@
 session_start();
 $controllers_available= array('main','login','blog');
 
-//Require the main controller and run it to get the most recent entry
-//require("./controllers/main.php");
-//mainController();
-
 //deciding the controller to be run
 if(isset($_GET['c']) && in_array($_GET['c'],$controllers_available)){
 	if("main"==$_GET['c']){

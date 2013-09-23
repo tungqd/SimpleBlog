@@ -9,6 +9,8 @@
 *
 */
 function blogController(){
-		
-		}
+	include ('/models/entry_model.php');
+	//pass entries to entry_model 
+	$_SESSION['view'] = 'blogview';		
+}
 ?>

@@ -40,6 +40,8 @@ function mainController(){
 */	
 function processEntry($filehandlers) {
 	global $data;
+	//initialize  $title, $name, $content, $comment
+	$title ='';
 	$name ='';
 	$content ='';
 	$comment ='';
@@ -65,5 +67,9 @@ function processEntry($filehandlers) {
 		$name = '';
 		$comment = '';
 	}
+}
+function addComment() {
+		
+
 }
 ?>

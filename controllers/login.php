@@ -10,7 +10,10 @@
 */
 
 function loginController(){
+	include ('./models/authenticate.php');
+	//Pass post data to authenticate
 	$_SESSION['view']=('loginscreen');
+	
 }
 ?>
 

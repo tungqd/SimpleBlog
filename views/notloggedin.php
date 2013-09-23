@@ -7,7 +7,7 @@
 
 <form action="index.php" method="GET">
 	<input type="hidden" name="c" value="login">
-	<input type="hidden" name="view" value="loggedin">
+	<input type="hidden" name="view" value="loginscreen">
     <input type="submit" value="Login">
     
 

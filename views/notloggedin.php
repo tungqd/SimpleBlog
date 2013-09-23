@@ -1,11 +1,14 @@
 <form 
     <input type="hidden" name="c" value="main.php">
-    <input type="hidden" name="v" value="notloggedin.php">
+    <input type="hidden" name="view" value="notloggedin.php">
     <input type="hidden" name="e" value="timestamp">
 </form>
 
-<form action="login.php" method="GET">
-    <input type="button" value="Login" >
+<form action="index.php" method="GET">
+	<input type="hidden" name="c" value="login">
+	<input type="hidden" name="view" value="loggedin">
+    <input type="submit" value="Login">
+    
 </form>
 
 

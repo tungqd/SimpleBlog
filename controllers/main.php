@@ -41,6 +41,7 @@ function mainController(){
 function processEntry($filehandlers) {
 	global $data;
 	$name ='';
+	$content ='';
 	$comment ='';
 	
 	//handle blog.txt

@@ -39,13 +39,13 @@ function main(){
 	displayView('notloggedin');
 }
 function login(){
-	include("./controllers/login.php");
+	require("./controllers/login.php");
 	loginController();
 	displayView($_SESSION['view']);
 }
 
 function blog(){
-	include("./controllers/blog.php");
+	require("./controllers/blog.php");
 	blogController();
 	displayView($_SESSION['view']);
 }

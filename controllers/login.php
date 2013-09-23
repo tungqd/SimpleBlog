@@ -10,6 +10,9 @@
 */
 
 function loginController(){
-		
-		}
+	$reslt = "login"
+	if ($reslt == "login") {
+		include ('./view/loggedin.php');
+	}		
+}
 ?>

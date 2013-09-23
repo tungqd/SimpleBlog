@@ -23,7 +23,7 @@ function mainController(){
 	// Call function in models/entry.php to read data stored in the entries folder
 	$filehandlers = getEntry();
 	processEntry($filehandlers);	
-	if("notloggedin"==$_GET['view']){
+	/*if("notloggedin"==$_GET['view']){
 			$_SESSION['view'] = "notloggedin";
 		}
 	else if ("loggedin" == $_GET['view']){
@@ -31,7 +31,7 @@ function mainController(){
 		}
 	else {
 			$_SESSION['view'] = "blog";
-		}	
+		}*/	
 }
 
 /**

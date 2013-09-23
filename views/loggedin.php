@@ -4,8 +4,11 @@
     <input type="hidden" name="e" value="timestamp">
 </form>
 
-<form action="blog.php" method="GET">
-    <input type="button" value="Add new entry" >
+
+<form action="index.php" method="GET">
+	<input type="hidden" name="c" value="blog">
+	<input type="hidden" name="view" value="blogview">
+    <input type="submit" value="Add new entry">
 </form>
 
 

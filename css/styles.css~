@@ -1,0 +1,21 @@
+body {
+  background: url(textture-noise.png);
+  overflow: hidden;
+  margin: 0;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica;
+}
+
+div.newest
+{
+height:200px;
+width:700px;
+float:left;
+}
+
+div list
+{
+height:200px;
+width:400px;
+float:right;
+}

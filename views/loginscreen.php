@@ -1,21 +1,23 @@
-<form 
-    <input type="hidden" name="c" value="login.php">
-    <input type="hidden" name="v" value="loginscreen.php">
-    <input type="hidden" name="e" value="timestamp">
+<h1>Simple Blog - Login Screen</h1>
+
+<form name="login" action="index.php" method="GET">   
+	<input type="hidden" name="c" value="login">
+    <table>	
+    	<tr>
+    		<td>Username</td>
+    		<td><input type="text" name="userid"></td>
+    	</tr>
+    	<tr>
+    		<td>Password</td>
+    		<td><input type="text" name="pw"></td>
+    	</tr>
+    	<tr><td><input type="submit" value="Login"></td></tr>
+   </table>
 </form>
-
-
-<form name="login">
-    Username<input type="text" name="userid"/>
-    Password<input type="text" name="pw"/>
-    <form action="index.php" method="POST">
-		<input type="hidden" name="c" value="login">
-		<input type="hidden" name="view" value="loggedin">
-    	<input type="submit" value="Login">
-    	<input type="reset" value="Cancel">
-    </form>
-    
-    
+<form name="cancel" action="index.php" method="GET">
+	<input type="hidden" name="c" value="main">
+	<input type="hidden" name="view" value="notloggedin">
+	<input type="submit" value="Cancel">
 </form>
 
 

@@ -1,11 +1,3 @@
-<form 
-    <input type="hidden" name="c" value="blog.php">
-    <input type="hidden" name="v" value="blogview.php">
-    <input type="hidden" name="e" value="timestamp">
-</form>
-
-
-
 <div id="newest" style="height:200px;width:700px;float:left;">
     <b>Most recent entry</b><br>
     <p><br><br><br><br></p>

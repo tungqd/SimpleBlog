@@ -1,10 +1,3 @@
-<form 
-    <input type="hidden" name="c" value="main.php">
-    <input type="hidden" name="v" value="loggedin.php">
-    <input type="hidden" name="e" value="timestamp">
-</form>
-
-
 <form action="index.php" method="GET">
 	<input type="hidden" name="c" value="blog">
 	<input type="hidden" name="view" value="blogview">

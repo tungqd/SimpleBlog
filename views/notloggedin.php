@@ -1,9 +1,3 @@
-<form> 
-    <input type="hidden" name="c" value="main">
-    <input type="hidden" name="view" value="notloggedin">
-    <input type="hidden" name="e" value="timestamp">
-</form>
-
 <div id="newest">
     <b>Most recent entry<br></b>
 
@@ -20,7 +14,7 @@
 </div>
 <form action="index.php" method="GET">
 	<input type="hidden" name="c" value="login">
-	<input type="hidden" name="view" value="loggedin">
+	<input type="hidden" name="view" value="loginscreen">
     <input type="submit" value="Login">
 </form>
 

@@ -8,4 +8,13 @@
 *
 *
 */
+$USERS["id"] = "pass";
+/*
+function verifyUser($uid, $pw) {
+	if ($uid == $USER[0] && $pw == $USER[1]) {
+		return true;		
+	} else {
+		return false;
+	}*/
+
 ?>

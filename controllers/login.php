@@ -10,24 +10,27 @@
 */
 
 //not signed in
-$_SESSION['signedin']= false;
+$_SESSION["logged"]= ("guest");
 
 function loginController(){
+	global $USER;
 	include ('./models/authenticate.php');
-	
-	$uid = $GET['userid'];
-	$pw = $GET['pw'];
-	if (true)
-		$_SESSION['signedin'] = true;
-		
-	if ($_SESSION['signedin']) {
-		$_SESSION['view']=('loggedin');
+	if ($_GET["ac"]=="log") { /// do after login form is submitted  
+     	if (isset($_GET["userid"]) && $USERS[$_GET["userid"]]==$_GET["pw"]) {
+     	/// check if submitted username and password exist in $USERS array 
+          	$_SESSION["logged"]=("loggedin");
+          	$_SESSION["view"]=("loggedin");
+     	} else { 
+          	$_SESSION["logged"]= "invalid";
+          	$_SESSION["view"]=("loginscreen");
+     	}
+    }
+    else {
+
+		$_SESSION["view"]=("loginscreen");
+    }
 	}
-	else {
-		$_SESSION['view']=('loginscreen');
-	}
-	
-}
+
 
 ?>
 

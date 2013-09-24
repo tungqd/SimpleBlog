@@ -9,11 +9,25 @@
 *
 */
 
+//not signed in
+$_SESSION['signedin']= false;
+
 function loginController(){
 	include ('./models/authenticate.php');
-	//Pass post data to authenticate
-	$_SESSION['view']=('loginscreen');
+	
+	$uid = $GET['userid'];
+	$pw = $GET['pw'];
+	if (true)
+		$_SESSION['signedin'] = true;
+		
+	if ($_SESSION['signedin']) {
+		$_SESSION['view']=('loggedin');
+	}
+	else {
+		$_SESSION['view']=('loginscreen');
+	}
 	
 }
+
 ?>
 

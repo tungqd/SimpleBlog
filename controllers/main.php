@@ -22,16 +22,7 @@ function mainController(){
 	include("./models/entry.php");
 	// Call function in models/entry.php to read data stored in the entries folder
 	$filehandlers = getEntry();
-	processEntry($filehandlers);	
-	/*if("notloggedin"==$_GET['view']){
-			$_SESSION['view'] = "notloggedin";
-		}
-	else if ("loggedin" == $_GET['view']){
-			$_SESSION['view'] = "loggedin";
-		}
-	else {
-			$_SESSION['view'] = "blog";
-		}*/	
+	processEntry($filehandlers);		
 }
 
 /**

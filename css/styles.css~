@@ -2,24 +2,29 @@ body {
   background: url(textture-noise.png);
   overflow: hidden;
   margin: 0;
-  font-size: 14px;
+  font-size: 20px;
   font-family: "Helvetica Neue", Helvetica;
 }
 
-
-
 #newest
 {
-height:300px;
+/*height:300px;*/
+color: white; 
 width:650px;
 float:left;
-background-color: blue;
+font-family:Lucida Sans Unicode;
+font-size: 20px;
+font-style: italic;
+border-style:inset;
+background: url(background-textures-black-texture-paper.jpg);
+overflow:hidden;
 }
-
 
 #list
 {
-height:300px;
+/*height:300px;*/
 width:400px;
-float:right;
+float:left;
+font-family:"Helvetica Neue", Helvetica;
+font-size: 16px;
 }

@@ -25,7 +25,6 @@
 
 <div id="list">
     <b>Entry list<br></b>
-    
     <?php echo $data['title'].'<br>'; ?>
 </div>
 

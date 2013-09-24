@@ -10,9 +10,10 @@
     <?php 
     	echo $data['title'].'<br>';
     	echo $data['content'].'<br>';
-    	echo $data['name1'].'<br>';
+    	echo "Comments".'<br>';
+    	echo $data['name1'].":".'<br>';
     	echo $data['comment1'].'<br>';
-    	echo $data['name2'].'<br>';
+    	echo $data['name2'].":".'<br>';
     	echo $data['comment2'].'<br>';
     ?>
 

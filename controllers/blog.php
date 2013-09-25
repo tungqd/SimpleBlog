@@ -9,11 +9,10 @@
 *
 */
 
-require "./models/entry_model.php";
-
-
 function blogController(){
-	//include ('./models/entry_model.php');
+	global $data;
+	include ('./models/entry_model.php');
+	$data = getAnEntry(0);
 	if (isset($_GET["a"]) && $_GET["a"] == "displayEntry") {
 		$_SESSION["view"] = "blogview";
 	} else {

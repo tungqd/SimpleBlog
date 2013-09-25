@@ -8,7 +8,9 @@
 *
 *
 */
-function blog_controller(){
-		
-		}
+function blogController(){
+	//include ('/models/entry.php');
+	//pass entries to entry_model 
+	$_SESSION['view'] = 'addnew';		
+}
 ?>

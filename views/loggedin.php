@@ -1,10 +1,15 @@
-
-
-<form action="blog.php" method="POST">
-    <input type="button" value="Add new entry" >
+<form action="index.php" method="GET">
+	<input type="hidden" name="c" value="blog">
+	<input type="hidden" name="view" value="blogview">
+    <input type="submit" value="Add new entry">
 </form>
 
 
+<form action="index.php" method="GET">
+	<input type="hidden" name="c" value="main">
+	<input type="hidden" name="view" value="notloggedin">
+    <input type="submit" value="Logout">
+</form>
 <div id="newest" style="height:200px;width:700px;float:left;">
     <b>Most recent entry</b>
 </div>

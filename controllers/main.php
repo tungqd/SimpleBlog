@@ -9,12 +9,7 @@
 *
 *
 */
-session_start();
-
-require "./models/entry_model.php";
-$data = "testing"; //global variable $data
-
-$controllers_avaliable= array('main','login');
+$data;//global variable $data
 
 /**
 * mainController reads data from entries folder then processes the data
@@ -22,13 +17,23 @@ $controllers_avaliable= array('main','login');
 */
 function mainController(){
 	//global $data;
-	//include("./models/entry.php");
-	
-	//addEntry(date("U"), "The first entry", "content of the first entry" . "\n". "the second line of the content");
-	/*
-	addEntry("1", "The first entry", "content of the  entry" . "\n". "the second line of the content");
-	
-	addEntry("2", "The second entry", "content of the second entry" . "\n". "the second line of the content");
+	include("./models/entry.php");
+	// Call function in models/entry.php to read data stored in the entries folder
+	$filehandlers = getEntry();
+	processEntry($filehandlers);		
+}
+
+/**
+*	processEntry processes filehandlers return from entry.php and renders to $data global
+*
+*/	
+function processEntry($filehandlers) {
+	global $data;
+	//initialize  $title, $name, $content, $comment
+	$title ='';
+	$name ='';
+	$content ='';
+	$comment ='';
 	
 	addEntry("12", "The third entry", "content of the third entry" . "\n". "the second line of the content");
 	
@@ -62,16 +67,8 @@ function mainController(){
 	print_r($result);
 	
 }
+function addComment() {
+		
 
-function login(){
-	include("./controllers/login.php");
-	login_controller();
-	displayView($_SESSION['viewname']);
-}
-
-function blog(){
-	include("./controllers/blog.php");
-	blog_controller();
-	displayView($_SESSION['viewname']);
 }
 ?>

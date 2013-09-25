@@ -29,8 +29,7 @@
        		echo $comment_name;
     		echo "<br>";
     		echo $comment_content;
-    	}
-       		
+    	}	
     ?>
     
     <form name="add">
@@ -43,6 +42,7 @@
     		<input type="submit" value="Submit comment">
     	</form>
     </form>
+    
 </div>
 
 <div id="comment" style="height:200px;width:700px;float:left;">

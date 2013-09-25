@@ -55,8 +55,13 @@
     <?php 
     	$blog = $data[0];
     	$title = $blog[0];
-    	echo "<a href = './controllers/blog.php'>{$title}</a>";
     ?>
+    <form action="index.php" method="GET">
+		<input type="hidden" name="c" value="blog">
+		<input type="hidden" name="view" value="blogview">
+    	<input type="submit" value="<? echo $title ?>">
+	</form>
+    
 </div>
 
 

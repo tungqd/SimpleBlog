@@ -18,7 +18,7 @@ $data;//global variable $data
 function mainController(){
 	//global $data;
 	include("./models/entry_model.php");
-	// Call function in models/entry.php to read data stored in the entries folder
+	// Call function in models/entry_model.php to read data stored in the entries folder
 	$filehandlers = getEntry();
 	processEntry($filehandlers);		
 }

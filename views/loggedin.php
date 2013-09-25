@@ -10,10 +10,7 @@
 	<input type="hidden" name="view" value="notloggedin">
     <input type="submit" value="Logout">
 </form>
-<<<<<<< HEAD
-<div id="newest" style="height:200px;width:700px;float:left;">
-    <b>Most recent entry</b>
-=======
+
 
 
 <div id="newest">
@@ -49,7 +46,6 @@
     		echo $comment_content;
     	}       		
     ?>
->>>>>>> e236bdcf2a0c15e0a4560793f5077e47e8dd208f
 </div>
 
 <div id="list" style="height:200px;width:400px;float:right;">
@@ -62,6 +58,22 @@
 
 <div id="comment" style="height:200px;width:700px;float:left;">
     <b>Comments</b>
+    <?php
+    /* Display array of comments */
+    	for ($i = 1; $i < count($data); $i++)
+    	{
+    		$comment = $data[$i];
+    		$comment_name = $comment[0];
+    		$comment_content = "";
+    		for ($j = 1; $j < count($comment); $j++)
+    		{
+    			$comment_content .= $comment[$j] . "<br>";
+       		}	   
+       		echo $comment_name;
+    		echo "<br>";
+    		echo $comment_content;
+    	}
+    ?>
 </div>
 
 

@@ -13,10 +13,12 @@ require "./models/entry_model.php";
 
 
 function blogController(){
-	//include ('/models/entry_model.php');
-	//pass entries to entry_model 
-	$_SESSION['view'] = 'addnew';	
-	
+	//include ('./models/entry_model.php');
+	if (isset($_GET["a"]) && $_GET["a"] == "displayEntry") {
+		$_SESSION["view"] = "blogview";
+	} else {
+		$_SESSION['view'] = 'addnew';	
+	}
 		
 }
 ?>

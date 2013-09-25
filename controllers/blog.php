@@ -9,7 +9,9 @@
 *
 */
 
-echo "I'm in controller";
+require "./models/entry_model.php";
+
+
 function blogController(){
 	//include ('/models/entry_model.php');
 	//pass entries to entry_model 

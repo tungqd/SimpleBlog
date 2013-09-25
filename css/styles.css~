@@ -25,7 +25,7 @@ overflow:hidden;
 /*height:300px;*/
 width:400px;
 float:left;
-
+text-align: right;
 font-family:"Helvetica Neue", Helvetica;
 font-size: 16px;
 }

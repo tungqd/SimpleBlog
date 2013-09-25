@@ -1,6 +1,5 @@
 <div id="newest" style="height:200px;width:700px;float:left;">
-    <b>Most recent entry</b><br>
-
+    
 	<?php 	
     	
     	/* Display entry itself */

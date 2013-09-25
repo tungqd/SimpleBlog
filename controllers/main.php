@@ -61,7 +61,7 @@ function processEntry($filehandlers) {
 	addComment("17", "2", "David", "comment from David" . "\n" . "The second line of the comment");
 	addComment("17", "5", "Mary", "comment from Mary" . "\n" . "The second line of the comment");
 	
-	*/
+	
 
 	$result = getMostRecent();
 	print_r($result);

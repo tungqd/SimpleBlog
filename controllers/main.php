@@ -16,18 +16,19 @@ $data;//global variable $data
 *
 */
 function mainController(){
-	//global $data;
+	global $data;
 	include("./models/entry_model.php");
 	// Call function in models/entry_model.php to read data stored in the entries folder
-	$filehandlers = getEntry();
-	processEntry($filehandlers);		
+	$entry = getMostRecentEntry(); //update Most recent entry into $data
+	//processEntry($entry);		
+	$data = $entry;
 }
 
 /**
-*	processEntry processes filehandlers return from entry.php and renders to $data global
+*	processEntry processes filehandlers return from entry_model.php and renders to global $data 
 *
 */	
-function processEntry($filehandlers) {
+function processEntry($entry) {
 	global $data;
 	//initialize  $title, $name, $content, $comment
 	$title ='';
@@ -41,7 +42,7 @@ function processEntry($filehandlers) {
 	
 	addEntry("17", "The fifth entry", "content of the fifth entry" . "\n". "the second line of the content");
 	
-	
+	/*
 	addComment("1", "1", "David", "comment from David" . "\n" . "The second line of the comment");
 	addComment("1", "3", "Henry", "comment from Henry" . "\n" . "The second line of the comment");
 	addComment("1", "7", "Larry", "comment from Larry" . "\n" . "The second line of the comment");
@@ -60,7 +61,7 @@ function processEntry($filehandlers) {
 	addComment("17", "7", "Larry", "comment from Larry" . "\n" . "The second line of the comment");
 	addComment("17", "2", "David", "comment from David" . "\n" . "The second line of the comment");
 	addComment("17", "5", "Mary", "comment from Mary" . "\n" . "The second line of the comment");
-	
+	*/
 	
 
 	$result = getMostRecent();

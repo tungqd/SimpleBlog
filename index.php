@@ -12,9 +12,8 @@
 
 //Require the main controller and run it to get the most recent entry
 
-require("./controllers/main.php");
+require "./controllers/main.php";
 mainController();
-
 //displayView renders and displays specific view
 function displayView($viewname){
 ?>

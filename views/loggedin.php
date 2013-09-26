@@ -58,12 +58,13 @@
         <input type="button" value="Delete">
     </form>
 </div> 
-
+-->
+<!--
 <div id="comment" style="height:200px;width:700px;float:left;">
     <b>Comments</b>
     
-</div>
--->
+</div> -->
+
 <!-- Entry list -->
 <div id="list">
     <b>Entry list<br></b>

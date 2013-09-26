@@ -33,7 +33,6 @@
     	}
        		
     ?>
-
 </div>
 
 <!-- "Login" button-->
@@ -50,6 +49,7 @@
     	$blog = $data[0];
     	$title = $blog[0];
     ?>
+    <!-- Loop to display list of entries -->
     <form action="index.php" method="GET">
 		<input type="hidden" name="c" value="blog">
 		<input type="hidden" name="view" value="blogview">

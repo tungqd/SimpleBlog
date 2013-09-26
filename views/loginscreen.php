@@ -7,6 +7,7 @@ if ($_SESSION['logged'] == 'invalid') {
 }
 ?>
 
+<!-- "Login" button-->
 <form name="login" action="index.php" method="GET">  
 	<input type="hidden" name="c" value="login">
 	<input type="hidden" name="ac" value="log">
@@ -15,7 +16,7 @@ if ($_SESSION['logged'] == 'invalid') {
     <input type="submit" value="Login">
 </form>
 
-
+<!-- "Cancel" button: bring user back to homepage -->
 <form name="cancel" action="index.php" method="GET">
 	<input type="hidden" name="c" value="main">
 	<input type="hidden" name="view" value="notloggedin">

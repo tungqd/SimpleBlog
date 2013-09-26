@@ -27,6 +27,6 @@ function blogController(){
 }
 function addBlogPost($title, $content) {
 	$timestamp = time();
-	addEntry($timestamp, $title, $contetnt);
+	addEntry($timestamp, $title, $content);
 }
 ?>

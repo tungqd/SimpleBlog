@@ -34,6 +34,7 @@
        		
     ?>
 
+<!-- "Login" button-->
 </div>
 <form action="index.php" method="GET">
 	<input type="hidden" name="c" value="login">
@@ -41,6 +42,7 @@
     <input type="submit" value="Login">
 </form>
 
+<!-- Entry list -->
 <div id="list">
     <b>Entry list<br></b>
     <?php 

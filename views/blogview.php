@@ -1,8 +1,7 @@
 <div id="newest">
     
+    <!-- Display entry itself -->
 	<?php 	
-    	
-    	/* Display entry itself */
     	$blog = $data[0];
     	$title = $blog[0];
     	$content = "";
@@ -15,31 +14,14 @@
     	echo $title;
     	echo "<br><br>";
     	echo $content."<br>";
-    	
-    	/* Display array of comments */
-    	for ($i = 1; $i < count($data); $i++)
-    	{
-    		$comment = $data[$i];
-    		$comment_name = $comment[0];
-    		$comment_content = "";
-    		for ($j = 1; $j < count($comment); $j++)
-    		{
-    			$comment_content .= $comment[$j] . "<br>";
-       		}	   
-       		echo $comment_name;
-    		echo "<br>";
-    		echo $comment_content;
-    	}	
-    ?>
-    
-    
-    
+    ?> 
 </div>
 
 <div id="comment">
-    <b>Comments</b>
+    <b>Comments</b><br>
+    
+    <!-- Display array of comments-->
     <?php
-    /* Display array of comments */
     	for ($i = 1; $i < count($data); $i++)
     	{
     		$comment = $data[$i];
@@ -52,8 +34,13 @@
        		echo $comment_name;
     		echo "<br>";
     		echo $comment_content;
+    		echo "<br>";
     	}
     ?>
+</div>
+    
+<div id="addComment">
+    <!-- Add comment section -->
     <form name="add">
         Name<input type="text" name="name"/><br>
         Comment<input type="text" name="comment"/>
@@ -64,4 +51,5 @@
     		<input type="submit" value="Submit comment">
     	</form>
     </form>
+    
 </div>

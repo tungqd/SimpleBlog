@@ -50,7 +50,7 @@
     <form action="index.php" method="GET">
 		<input type="hidden" name="c" value="blog">
 		<input type="hidden" name="view" value="blogview">
-		<input type="hidden" name="a" value="displayEntry">
+		<input type="hidden" name="e" value="displayEntry">
     	<input type="submit" value="<? echo $title ?>">
 	</form>
     

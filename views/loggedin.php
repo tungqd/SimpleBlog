@@ -10,11 +10,6 @@
 	<input type="hidden" name="view" value="notloggedin">
     <input type="submit" value="Logout">
 </form>
-<<<<<<< HEAD
-<div id="newest" style="height:200px;width:700px;float:left;">
-    <b>Most recent entry</b>
-=======
-
 
 <div id="newest">
     <b>Most recent entry<br></b>
@@ -49,7 +44,7 @@
     		echo $comment_content;
     	}       		
     ?>
->>>>>>> e236bdcf2a0c15e0a4560793f5077e47e8dd208f
+
 </div>
 
 <div id="list" style="height:200px;width:400px;float:right;">

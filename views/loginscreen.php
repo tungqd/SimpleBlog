@@ -7,8 +7,7 @@ if ($_SESSION['logged'] == 'invalid') {
 }
 ?>
 
-<form name="login" action="index.php" method="GET">  
-	<input type="hidden" name="c" value="login">
+<form name="login" action="index.php?c=login" method="POST">  
 	<input type="hidden" name="ac" value="log">
     Username: <input type="text" name="userid"><br>
     Password: <input type="password" name="pw"><br>

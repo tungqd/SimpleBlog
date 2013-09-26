@@ -9,6 +9,7 @@
 *
 */
 
+//require_once("./config/config.php");
 
 session_start();
 $controllers_available= array('main','login','blog');

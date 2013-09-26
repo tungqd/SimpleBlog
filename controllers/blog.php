@@ -16,16 +16,17 @@ function blogController(){
 	if (isset($_GET["e"]) && $_GET["e"] == "displayEntry") {
 		$_SESSION["view"] = "blogview";
 	} 
-	if (isset($_GET["e"]) && $_GET["e"] == "addEntry"){
+	else if (isset($_POST["ac"]) && $_POST["ac"] == "addEntry"){
 		addBlogPost($_POST["title"], $_POST["content"]);
 		$_SESSION['view'] = "loggedin";
 	} else {
 		$_SESSION['view'] = 'addnew';	
 	}
+	
 		
 }
 function addBlogPost($title, $content) {
-	$timestamp = date();
+	$timestamp = time();
 	addEntry($timestamp, $title, $contetnt);
 }
 ?>

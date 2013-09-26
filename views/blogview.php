@@ -29,10 +29,31 @@
        		echo $comment_name;
     		echo "<br>";
     		echo $comment_content;
-    	}
-       		
+    	}	
     ?>
     
+    
+    
+</div>
+
+<div id="comment" style="height:200px;width:700px;float:left;">
+    <b>Comments</b>
+    <?php
+    /* Display array of comments */
+    	for ($i = 1; $i < count($data); $i++)
+    	{
+    		$comment = $data[$i];
+    		$comment_name = $comment[0];
+    		$comment_content = "";
+    		for ($j = 1; $j < count($comment); $j++)
+    		{
+    			$comment_content .= $comment[$j] . "<br>";
+       		}	   
+       		echo $comment_name;
+    		echo "<br>";
+    		echo $comment_content;
+    	}
+    ?>
     <form name="add">
         Name<input type="text" name="name"/><br>
         Comment<input type="text" name="comment"/>
@@ -43,8 +64,4 @@
     		<input type="submit" value="Submit comment">
     	</form>
     </form>
-</div>
-
-<div id="comment" style="height:200px;width:700px;float:left;">
-    <b>Comments</b>
 </div>

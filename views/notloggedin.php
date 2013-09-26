@@ -34,8 +34,9 @@
        		
     ?>
 
-<!-- "Login" button-->
 </div>
+
+<!-- "Login" button-->
 <form action="index.php" method="GET">
 	<input type="hidden" name="c" value="login">
 	<input type="hidden" name="view" value="loginscreen">

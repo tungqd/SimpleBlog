@@ -1,4 +1,4 @@
-<div id="newest" style="height:200px;width:700px;float:left;">
+<div id="newest">
     
 	<?php 	
     	
@@ -36,7 +36,7 @@
     
 </div>
 
-<div id="comment" style="height:200px;width:700px;float:left;">
+<div id="comment">
     <b>Comments</b>
     <?php
     /* Display array of comments */

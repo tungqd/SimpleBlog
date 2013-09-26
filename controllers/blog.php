@@ -16,10 +16,9 @@ function blogController(){
 	if (isset($_GET["e"]) && $_GET["e"] == "displayEntry") {
 		$_SESSION["view"] = "blogview";
 	} 
-	if ($_POST["a"] == "addEntry"){
-	
+	if (isset($_GET["e"]) && $_GET["e"] == "addEntry"){
+		addBlogPost($_POST["title"], $_POST["content"]);
 		$_SESSION['view'] = "loggedin";
-		//addBlogPost($_POST["title"], $_POST["content"]);
 	} else {
 		$_SESSION['view'] = 'addnew';	
 	}

@@ -1,3 +1,4 @@
+<?php echo "<h2>Simple Blog &nbsp;-&nbsp; Homepage</h2>" ?>
 <div id="newest">
     <!-- <b>Most recent entry<br></b> -->
 
@@ -48,6 +49,7 @@
     <?php 
     	$blog = $data[0];
     	$title = $blog[0];
+    	
     ?>
     <!-- Loop to display list of entries -->
     <form action="index.php" method="GET">

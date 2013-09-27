@@ -10,18 +10,27 @@
 *
 */
 $data;//global variable $data
-
+include("./models/entry_model.php");
+//$entrylist;
 /**
 * mainController reads data from entries folder then processes the data
 *
 */
 function mainController(){
+	global $time;
 	global $data;
-	include("./models/entry_model.php");
+	//global $entrylist;
 	// Call function in models/entry_model.php to read data stored in the entries folder
-	$entry = getMostRecentEntry(); //update Most recent entry into $data
+	$data = getMostRecentEntry(); //update Most recent entry into $data
 	//processEntry($entry);		
-	$data = $entry;
+	//$entrylist = getAllEntries();
+	if (isset($_POST["ac"]) && $_POST["ac"] == "addComment") {
+		//addAComment($_POST["e"], $_POST["name"], $_POST["comment"]);
+		$_SESSION["view"] = "blogview";
+	}
+	else {
+		$_SESSION["view"] = "notloggedin";
+		}
 }
 
 /**
@@ -68,9 +77,10 @@ function processEntry($entry) {
 	print_r($result);
 	
 }
-/*
-function addComment() {
-		
 
-}*/
+function addAComment($ctimestamp, $name, $comment) {		
+	global $time;
+	$etimestamp = $time[count($timestamps)-1];
+	addComment($etimestamp, $ctimestamp, $name, $comment);
+}
 ?>

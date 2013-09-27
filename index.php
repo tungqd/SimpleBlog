@@ -33,7 +33,7 @@ $controller();
 function main(){
 	require("./controllers/main.php");
 	mainController();
-	displayView('notloggedin');
+	displayView($_SESSION['view']);
 }
 function login(){
 	require("./controllers/login.php");
@@ -67,6 +67,8 @@ function displayView($viewname){
 	
 	<?php 
 		global $data;
+		//global $entrylist;
+		global $time;
 		include("./views/{$viewname}.php"); 
 	?>
 

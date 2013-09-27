@@ -38,16 +38,13 @@
     	}
     ?>
 </div>
-    
 <div id="addComment">
     <!-- Add comment section -->
-    <form name="add">
+    <form name="add" action="index.php?c=main" method="POST">
         Name<input type="text" name="name"/><br>
         Comment<input type="text" name="comment"/>
-        <form action="index.php" method="POST">
-			<input type="hidden" name="c" value="main">
-			<input type="hidden" name="a" value="main">
-			<input type="hidden" name="view" value="blogview">
+        	<input type="hidden" name="ac" value="addComment">
+			<input type="hidden" name="e" value="<?php echo time(); ?>">
     		<input type="submit" value="Submit comment">
     	</form>
     </form>

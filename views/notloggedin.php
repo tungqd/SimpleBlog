@@ -8,8 +8,8 @@
     	$title = $blog[0];
     	$content = "";
     	
-    	for ($i = 1; $i < count($blog); $i++)
-    	{
+		for ($i = 1; $i < count($data); $i++)    	
+		{
     		$content .= $blog[$i] . "<br>";
     	}
     	
@@ -20,7 +20,7 @@
     	/* Display array of comments */
     	for ($i = 1; $i < count($mostRecentEntry); $i++)
     	{
-    		$comment = $data[$i];
+    		$comment = $mostRecentEntry[$i];
     		$comment_name = $comment[0];
     		$comment_content = "";
     		for ($j = 1; $j < count($comment); $j++)

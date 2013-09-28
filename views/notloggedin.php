@@ -1,5 +1,4 @@
 <div id="newest">
-    <!-- <b>Most recent entry<br></b> -->
 
     <?php 	
     	

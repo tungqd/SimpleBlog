@@ -1,9 +1,10 @@
 <div id="newest">
 
     <?php 	
-    	
+    	//print_r($data);
     	/* Display entry itself */
-    	$blog = $data[0];
+    	$mostRecentEntry = $data[0];
+    	$blog = $mostRecentEntry[0];
     	$title = $blog[0];
     	$content = "";
     	
@@ -17,7 +18,7 @@
     	echo $content."<br>";
     	
     	/* Display array of comments */
-    	for ($i = 1; $i < count($data); $i++)
+    	for ($i = 1; $i < count($mostRecentEntry); $i++)
     	{
     		$comment = $data[$i];
     		$comment_name = $comment[0];
@@ -45,8 +46,8 @@
 <div id="list">
     <b>Entry list<br></b>
     <?php 
-    	$blog = $data[0];
-    	$title = $blog[0];
+    	for ($i=0; $i < count($data); $i++) {
+    		$title = $data[$i][0][0];  
     ?>
     
     <!-- Loop to display list of entries -->
@@ -56,7 +57,9 @@
 		<input type="hidden" name="e" value="displayEntry">
     	<input type="submit" value="<? echo $title ?>">
 	</form>
-    
+    <?php
+    }
+    ?>
 </div>
 
 

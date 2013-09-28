@@ -21,7 +21,8 @@ function mainController(){
 	global $data;
 	//global $entrylist;
 	// Call function in models/entry_model.php to read data stored in the entries folder
-	$data = getMostRecentEntry(); //update Most recent entry into $data
+	//$data = getMostRecentEntry(); //update Most recent entry into $data
+	updateAllEntries();
 	//processEntry($entry);		
 	//$entrylist = getAllEntries();
 	if (isset($_POST["ac"]) && $_POST["ac"] == "addComment") {
@@ -78,6 +79,10 @@ function processEntry($entry) {
 	
 }
 
+function updateAllEntries() {
+	global $data;
+	$data = getAllEntries();
+}
 function addAComment($ctimestamp, $name, $comment) {		
 	global $time;
 	$etimestamp = $time[count($timestamps)-1];

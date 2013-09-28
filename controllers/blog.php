@@ -14,7 +14,7 @@ include ("./models/entry_model.php");
 function blogController(){	
 	global $time;
 	$time[0] = 0;
-	updateEntry();
+	updateAllEntries();
 	
 	//display blog entry
 	if (isset($_GET["e"]) && $_GET["e"] == "displayEntry") {
@@ -46,8 +46,8 @@ function addBlogPost($timestamp, $title, $content) {
 * This function updates $data to the latest entry 
 *
 */
-function updateEntry() {
+function updateAllEntries() {
 	global $data;
-	$data = getMostRecentEntry();
+	$data = getAllEntries();
 }	
 ?>

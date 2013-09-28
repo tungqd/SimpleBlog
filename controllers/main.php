@@ -21,7 +21,6 @@ function mainController(){
 	global $data;
 	//global $entrylist;
 	// Call function in models/entry_model.php to read data stored in the entries folder
-	//$data = getMostRecentEntry(); //update Most recent entry into $data
 	updateAllEntries();
 	//processEntry($entry);		
 	//$entrylist = getAllEntries();

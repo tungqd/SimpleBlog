@@ -2,7 +2,8 @@
     
     <!-- Display entry itself -->
 	<?php 	
-    	$blog = $data[0];
+		$entry = $data[$_GET["a"]];
+    	$blog = $entry[0];
     	$title = $blog[0];
     	$content = "";
     	

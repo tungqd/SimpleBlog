@@ -1,14 +1,13 @@
 <div id="newest">
 
     <?php 	
-    	//print_r($data);
     	/* Display entry itself */
-    	$mostRecentEntry = $data[0];
+    	$mostRecentEntry = $data[0]; 
     	$blog = $mostRecentEntry[0];
     	$title = $blog[0];
     	$content = "";
     	
-		for ($i = 1; $i < count($data); $i++)    	
+    	for ($i = 1; $i < count($mostRecentEntry); $i++)    	
 		{
     		$content .= $blog[$i] . "<br>";
     	}

@@ -15,6 +15,7 @@ function blogController(){
 	global $time;
 	$time[0] = 0;
 	updateEntry();
+	
 	//display blog entry
 	if (isset($_GET["e"]) && $_GET["e"] == "displayEntry") {
 		$_SESSION["view"] = "blogview";

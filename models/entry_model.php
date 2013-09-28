@@ -18,7 +18,7 @@ This function adds an entry to the data model.
 function addEntry($timestamp, $title, $content)
 {
 
-	$folder = "./entries/" . $timestamp;
+	$folder = "./entries/" . $timestamp; //Create folder name for each entry
 	if (!file_exists($folder)) 
 	{
     		mkdir($folder, 0777);

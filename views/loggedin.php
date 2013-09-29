@@ -81,16 +81,21 @@
     ?>
     
    		<form action="index.php" method="GET">
+   		<div id="entryList">
 			<input type="hidden" name="c" value="blog">
 			<input type="hidden" name="view" value="blogview">
 			<input type="hidden" name="e" value="displayEntry">
 			<input type="hidden" name="a" value="<?php echo $i ?>">
     		<input type="submit" value="<? echo $title ?>"> 		
+    	</div>
 		</form>
+		
 		<form action="index.php" method="GET"> 
+		<div id="Delete">
 				<input type="hidden" name="c" value="main">
 				<input type="hidden" name="view" value="notloggedin">
     			<input type="submit" value="Delete">
+    	</div>
 		</form>
     <?php
     	}

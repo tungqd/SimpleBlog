@@ -57,14 +57,15 @@
 
 <div id="addComment">
     <!-- Add comment section -->
-    <form name="add" action="index.php?c=main" method="POST">
+    <form name="add" action="index.php?c=main" id="addComm" method="POST">
+    	<input type="hidden" name="ac" value="addComment">
+        <input type="hidden" name="e" value="<?php echo $_GET["a"]; ?>">
+		<input type="hidden" name="t" value="<?php echo time(); ?>">
         Name<input type="text" name="name"/><br>
         Content: <br>
-        <textarea rows="4" cols="50" name="content" form="addBlog"></textarea>
-        	<input type="hidden" name="ac" value="addComment">
-        	<input type="hidden" name="e" value="<?php echo $_GET["a"]; ?>">
-			<input type="hidden" name="t" value="<?php echo time(); ?>">
-    		<input type="submit" value="Submit comment">
+        <textarea rows="4" cols="50" name="comment" form="addComm"></textarea>
+    	<input type="submit" value="Submit comment">
     	</form>
     </form>    
 </div>
+

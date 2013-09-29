@@ -32,6 +32,6 @@ font-size: 16px;
 
 #entryList
 {
-float: left;
+float: right;
 }
 

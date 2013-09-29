@@ -18,7 +18,7 @@
     ?> 
 </div>
 
-<div id="comment">
+<div id="blogViewComment">
     <b>Comments</b><br>
     
     <!-- Display array of comments-->
@@ -37,8 +37,16 @@
        	
        		echo $comment_name;
     		echo "<br>";
-    		echo $comment_content."<br>";
-    	}
+    		echo $comment_content;
+    ?>
+    		<!-- "Delete" comment button -->
+    		<form action="index.php" method="GET"> 
+				<input type="hidden" name="c" value="main">
+				<input type="hidden" name="view" value="notloggedin">
+    			<input type="submit" value="Delete">
+			</form>
+    <?php
+        	}
     ?>
 </div>
 <div id="addComment">

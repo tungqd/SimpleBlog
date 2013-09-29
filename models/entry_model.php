@@ -114,7 +114,6 @@ function deleteComment($entryIndex, $commentIndex)
 	$path = $path . "/{$entries[$entryIndex]}";
 	$comments = getDirEntries($path);
 	rsort($comments);
-	
 	$path = $path . "/{$comments[$commentIndex]}";
 	unlink($path);
 }

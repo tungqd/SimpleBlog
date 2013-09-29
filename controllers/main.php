@@ -29,6 +29,12 @@ function mainController(){
 		$_SESSION["view"] = "blogview";
 		$_GET["a"] = $_POST["e"];
 	}
+	else if (isset($_GET["ac"]) && $_GET["ac"] == "deleteComment") {
+		deleteAComment($_GET["ei"], $_GET["ci"]);
+		updateAllEntries();
+		$_SESSION["view"] = "blogview";
+		$_GET["a"] = $_GET["ei"];
+	}
 	else if (isset($_GET["e"]) && $_GET["e"] == "deleteEntry") {
 		deleteAnEntry($_GET["a"]);
 		updateAllEntries();
@@ -41,6 +47,10 @@ function mainController(){
 
 function addAComment($index, $timestamp, $name, $comment) {		
 	addComment($index, $timestamp, $name, $comment);
+}
+
+function deleteAComment($entryi, $commenti) {
+	deleteComment($entryi, $commenti);
 }
 function deleteAnEntry($i) {
 	deleteEntry($i);

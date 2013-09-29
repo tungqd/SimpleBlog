@@ -45,7 +45,10 @@
     			<!-- "Delete" comment button -->
     			<form action="index.php" method="GET"> 
 					<input type="hidden" name="c" value="main">
-					<input type="hidden" name="view" value="notloggedin">
+					<input type="hidden" name="view" value="loggedin">
+					<input type="hidden" name="ac" value="deleteComment">
+					<input type="hidden" name="ei" value="<?php echo $_GET["a"]; ?>">
+					<input type="hidden" name="ci" value="<?php echo $i-1;?>">
     				<input type="submit" value="Delete">
 				</form>
    		<?php
@@ -60,7 +63,7 @@
     <form name="add" action="index.php?c=main" method="POST">
         Name<input type="text" name="name"/><br>
         Content: <br>
-        <textarea rows="4" cols="50" name="content" form="addBlog"></textarea>
+        <textarea rows="4" cols="50" name="comment" form="addBlog"></textarea>
         	<input type="hidden" name="ac" value="addComment">
         	<input type="hidden" name="e" value="<?php echo $_GET["a"]; ?>">
 			<input type="hidden" name="t" value="<?php echo time(); ?>">

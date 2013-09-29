@@ -18,17 +18,20 @@
     <!-- <b>Most recent entry<br></b> -->
 
     <?php 	
-    	
+    	$mostRecentEntry = $data[0]; //Assign the latest entry in $data into $mostRecentEntry
+    
     	/* Display entry itself */
-    	$mostRecentEntry = $data[0]; 
-    	$blog = $mostRecentEntry[0];
-    	$title = $blog[0];
-    	$blog_content = "";	
     	
-    	for ($i = 1; $i < count($blog); $i++)    	
-		{		
-			$blog_content .= $blog[$i] . "<br>";
-    	}
+    		//Blog array has title and several lines of content
+    		$blog = $mostRecentEntry[0]; 
+    		$title = $blog[0];
+    		$blog_content = "";	
+    	
+    		/* Add and append content to $blog_content through loop */
+    		for ($i = 1; $i < count($blog); $i++)    	
+			{		
+				$blog_content .= $blog[$i] . "<br>";
+    		}
     	
     	echo $title;
     	echo "<br><br>";
@@ -41,17 +44,16 @@
     		$comment_name = $comment_array[0];
     		$comment_content = "";
     		
-    		/* Display content of comments */
+    		/* Add and append content line in EACH comment */
     		for ($j = 1; $j < count($comment_array); $j++)
     		{
     			$comment_content .= $comment_array[$j] . "<br>";
        		}	   
+       		echo "Comment:"."<br>";
        		echo $comment_name;
     		echo "<br>";
     		echo $comment_content;
     	}
-       		
-       		
     ?>
 </div>
 

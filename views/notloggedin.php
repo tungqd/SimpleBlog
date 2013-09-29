@@ -32,6 +32,7 @@
     		{
     			$comment_content .= $comment_array[$j] . "<br>";
        		}	   
+       		echo "Comment:"."<br>";
        		echo $comment_name;
     		echo "<br>";
     		echo $comment_content;

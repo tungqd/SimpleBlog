@@ -2,7 +2,7 @@
 		<input type="hidden" name="ac" value="addEntry">
 		<input type="hidden" name="e" value="<?php echo time(); ?>">
         Title<input type="text" name="title"/><br>
-        Content<input type="textarea" name="content">
+        Content<input type="text" name="content">
     	<input type="submit" value="Submit">
     	</form>
 </form>

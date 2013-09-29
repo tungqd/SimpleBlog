@@ -24,7 +24,7 @@ function blogController(){
 	else if (isset($_POST["ac"]) && $_POST["ac"] == "addEntry"){
 		$time[] = $_POST["e"];
 		addBlogPost($_POST["e"], $_POST["title"], $_POST["content"]);
-		updateEntry();
+		updateAllEntries();
 		$_SESSION['view'] = "loggedin";
 	} 
 	//Add new entry

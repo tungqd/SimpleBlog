@@ -23,31 +23,34 @@
     	$mostRecentEntry = $data[0]; 
     	$blog = $mostRecentEntry[0];
     	$title = $blog[0];
-    	$content = "";
+    	$blog_content = "";	
     	
-    	for ($i = 1; $i < count($mostRecentEntry); $i++)    	
-		{
-    		$content .= $blog[$i] . "<br>";
+    	for ($i = 1; $i < count($blog); $i++)    	
+		{		
+			$blog_content .= $blog[$i] . "<br>";
     	}
     	
     	echo $title;
     	echo "<br><br>";
-    	echo $content."<br>";
+    	echo $blog_content."<br>";
     	
     	/* Display array of comments */
     	for ($i = 1; $i < count($mostRecentEntry); $i++)
     	{
-    		$comment = $mostRecentEntry[$i];
-    		$comment_name = $comment[0];
+    		$comment_array = $mostRecentEntry[$i];
+    		$comment_name = $comment_array[0];
     		$comment_content = "";
-    		for ($j = 1; $j < count($comment); $j++)
+    		
+    		/* Display content of comments */
+    		for ($j = 1; $j < count($comment_array); $j++)
     		{
-    			$comment_content .= $comment[$j] . "<br>";
+    			$comment_content .= $comment_array[$j] . "<br>";
        		}	   
        		echo $comment_name;
     		echo "<br>";
     		echo $comment_content;
     	}
+       		
        		
     ?>
 </div>

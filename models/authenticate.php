@@ -8,13 +8,46 @@
 *
 *
 */
-$USERS["id"] = "pass";
-/*
-function verifyUser($uid, $pw) {
-	if ($uid == $USER[0] && $pw == $USER[1]) {
-		return true;		
-	} else {
-		return false;
-	}*/
+
+/**
+Checks if current user is logged in or not
+*/
+function isCurrentLoggedIn()
+{
+	return isset($_SESSION['loggedIn']);
+}
+
+/**
+Verifies if username is "pat" and password id "secret"
+*/
+function verifyUser($uID, $pw)
+{
+	return $uID == "pat" && $pw == "secret";
+}
+
+/**
+sets the session variable
+*/
+function setSessionVariable()
+{
+	$_SESSION['loggedIn'] = true;
+}
+
+/**
+destroys the session variable
+*/
+function destroySession()
+{
+	if(isset($_SESSION['loggedIn']))
+	{
+  		unset($_SESSION['loggedIn']);
+  	}
+}
 
 ?>
+
+
+
+
+
+

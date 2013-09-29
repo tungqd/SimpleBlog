@@ -3,7 +3,7 @@
     
     	<!-- Display entry itself -->
 		<?php 	
-			$entry = $data[$_GET["a"]];
+			$entry = $data[$_GET["e"]];
     		$blog = $entry[0];
     		$title = $blog[0];
     		$content = "";
@@ -47,7 +47,7 @@
 					<input type="hidden" name="c" value="main">
 					<input type="hidden" name="view" value="loggedin">
 					<input type="hidden" name="ac" value="deleteComment">
-					<input type="hidden" name="ei" value="<?php echo $_GET["a"]; ?>">
+					<input type="hidden" name="ei" value="<?php echo $_GET["e"]; ?>">
 					<input type="hidden" name="ci" value="<?php echo $i-1;?>">
     				<input type="submit" value="Delete">
 				</form>
@@ -62,7 +62,7 @@
     <!-- Add comment section -->
     <form name="add" action="index.php?c=main" id="addComm" method="POST">
     	<input type="hidden" name="ac" value="addComment">
-        <input type="hidden" name="e" value="<?php echo $_GET["a"]; ?>">
+        <input type="hidden" name="e" value="<?php echo $_GET["e"]; ?>">
 		<input type="hidden" name="t" value="<?php echo time(); ?>">
         Name<input type="text" name="name"/><br>
         Content: <br>

@@ -84,8 +84,8 @@
    		<div id="entryList">
 			<input type="hidden" name="c" value="blog">
 			<input type="hidden" name="view" value="blogview">
-			<input type="hidden" name="e" value="displayEntry">
-			<input type="hidden" name="a" value="<?php echo $i ?>">
+			<input type="hidden" name="ac" value="displayEntry">
+			<input type="hidden" name="e" value="<?php echo $i ?>">
     		<input type="submit" value="<? echo $title ?>"> 		
     	</div>
 		</form>
@@ -94,8 +94,8 @@
 		<div id="Delete">
 				<input type="hidden" name="c" value="main">
 				<input type="hidden" name="view" value="notloggedin">
-				<input type="hidden" name="e" value="deleteEntry">
-				<input type="hidden" name="a" value="<?php echo $i ?>">
+				<input type="hidden" name="ac" value="deleteEntry">
+				<input type="hidden" name="e" value="<?php echo $i ?>">
     			<input type="submit" value="Delete">
     	</div>
 		</form>

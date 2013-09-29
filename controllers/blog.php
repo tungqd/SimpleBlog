@@ -13,17 +13,17 @@ include ("./models/entry_model.php");
 function blogController(){	
 	updateAllEntries();
 	
-	//display blog entry
-	if (isset($_GET["e"]) && $_GET["e"] == "displayEntry") {
+	//display a blog entry
+	if (isset($_GET["ac"]) && $_GET["ac"] == "displayEntry") {
 		$_SESSION["view"] = "blogview";
 	} 
-	//Entry is added
+	//Add an entry
 	else if (isset($_POST["ac"]) && $_POST["ac"] == "addEntry"){
 		addBlogPost($_POST["e"], $_POST["title"], $_POST["content"]);
 		updateAllEntries();
 		$_SESSION['view'] = "loggedin";
 	} 
-	//Add new entry
+	//Add new entry screen
 	else {
 		$_SESSION['view'] = "addnew";	
 	}

@@ -12,7 +12,7 @@ session_start();
 
 require_once('./config/config.php');
 
-
+// there are 3 controllers
 $controllers_available= array('main','login','blog');
 
 //deciding the controller to be run
@@ -68,8 +68,6 @@ function displayView($viewname){
 	
 	<?php 
 		global $data;
-		//global $entrylist;
-		global $time;
 		include("./views/{$viewname}.php"); 
 	?>
 

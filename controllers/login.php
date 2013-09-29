@@ -13,10 +13,9 @@
 function loginController(){
 	global $USER;
 	include ('./models/authenticate.php');
-	if ($_POST["ac"]=="log") { /// do after login form is submitted  
+	//Login form is submitted
+	if ($_POST["ac"]=="log") {
      	if (verifyUser($_POST["userid"],$_POST["pw"])) {
-     	/// check if submitted username and password exist in $USERS array 
-     		//update new $data with most recent entry
      		global $data;	
      		include ('./models/entry_model.php');	
 			updateAllEntries();

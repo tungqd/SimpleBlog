@@ -11,32 +11,32 @@
 */
 $data;//global variable $data
 include("./models/entry_model.php");
-//$entrylist;
+
 /**
 * mainController reads data from entries folder then processes the data
 *
 */
 function mainController(){
 	global $data;
-	//global $entrylist;
-	// Call function in models/entry_model.php to read data stored in the entries folder
+	
 	updateAllEntries();
-	//processEntry($entry);		
-	//$entrylist = getAllEntries();
+	//Add a comment
 	if (isset($_POST["ac"]) && $_POST["ac"] == "addComment") {
 		addAComment($_POST["e"], $_POST["t"], $_POST["name"], $_POST["comment"]);
 		updateAllEntries();
 		$_SESSION["view"] = "blogview";
-		$_GET["a"] = $_POST["e"];
+		$_GET["e"] = $_POST["e"];
 	}
+	//Delete a comment
 	else if (isset($_GET["ac"]) && $_GET["ac"] == "deleteComment") {
 		deleteAComment($_GET["ei"], $_GET["ci"]);
 		updateAllEntries();
 		$_SESSION["view"] = "blogview";
-		$_GET["a"] = $_GET["ei"];
+		$_GET["e"] = $_GET["ei"];
 	}
-	else if (isset($_GET["e"]) && $_GET["e"] == "deleteEntry") {
-		deleteAnEntry($_GET["a"]);
+	//Delete an entry
+	else if (isset($_GET["ac"]) && $_GET["ac"] == "deleteEntry") {
+		deleteAnEntry($_GET["e"]);
 		updateAllEntries();
 		$_SESSION["view"] = "loggedin";
 	}
@@ -44,14 +44,24 @@ function mainController(){
 		$_SESSION["view"] = "notloggedin";
 		}
 }
-
+/** 
+* This function adds a comment
+*
+*/
 function addAComment($index, $timestamp, $name, $comment) {		
 	addComment($index, $timestamp, $name, $comment);
 }
-
+/**
+* This function delete a comment
+*
+*/
 function deleteAComment($entryi, $commenti) {
 	deleteComment($entryi, $commenti);
 }
+/**
+* This function deletes an entry from the list
+*
+*/
 function deleteAnEntry($i) {
 	deleteEntry($i);
 }

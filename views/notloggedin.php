@@ -1,7 +1,7 @@
 <div id="newest">
 
     <?php 	
-    	$mostRecentEntry = $data[0]; //Assign the latest entry in $data into $mostRecentEntry
+    	$mostRecentEntry = $data[0];//Assign the latest entry in $data into $mostRecentEntry
     
     	/* Display entry itself */
     	
@@ -61,8 +61,8 @@
     <form action="index.php" method="GET">
 		<input type="hidden" name="c" value="blog">
 		<input type="hidden" name="view" value="blogview">
-		<input type="hidden" name="e" value="displayEntry">
-		<input type="hidden" name="a" value="<?php echo $i ?>">
+		<input type="hidden" name="ac" value="displayEntry">
+		<input type="hidden" name="e" value="<?php echo $i ?>">
     	<input type="submit" value="<? echo $title ?>">
 	</form>
     <?php

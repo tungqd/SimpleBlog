@@ -36,6 +36,7 @@
     	echo $title;
     	echo "<br><br>";
     	echo $blog_content."<br>";
+    	echo "Comments:"."<br>";
     	
     	/* Display array of comments */
     	for ($i = 1; $i < count($mostRecentEntry); $i++)
@@ -49,10 +50,10 @@
     		{
     			$comment_content .= $comment_array[$j] . "<br>";
        		}	   
-       		echo "Comment:"."<br>";
+       	
        		echo $comment_name;
     		echo "<br>";
-    		echo $comment_content;
+    		echo $comment_content."<br>";
     	}
     ?>
 </div>
@@ -82,9 +83,10 @@
     
     <!-- Loop to display list of entries -->
     <form action="index.php" method="GET">
-		<input type="hidden" name="c" value="main">
+		<input type="hidden" name="c" value="blog">
 		<input type="hidden" name="view" value="blogview">
 		<input type="hidden" name="e" value="displayEntry">
+		<input type="hidden" name="a" value="<?php echo $i ?>">
     	<input type="submit" value="<? echo $title ?>">
 	</form>
     <?php

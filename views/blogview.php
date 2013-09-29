@@ -23,19 +23,21 @@
     
     <!-- Display array of comments-->
     <?php
-    	for ($i = 1; $i < count($data); $i++)
+    	for ($i = 1; $i < count($entry); $i++)
     	{
-    		$comment = $data[$i];
-    		$comment_name = $comment[0];
+    		$comment_array = $entry[$i];
+    		$comment_name = $comment_array[0];
     		$comment_content = "";
-    		for ($j = 1; $j < count($comment); $j++)
+    		
+    		/* Add and append content line in EACH comment */
+    		for ($j = 1; $j < count($comment_array); $j++)
     		{
-    			$comment_content .= $comment[$j] . "<br>";
+    			$comment_content .= $comment_array[$j] . "<br>";
        		}	   
+       	
        		echo $comment_name;
     		echo "<br>";
-    		echo $comment_content;
-    		echo "<br>";
+    		echo $comment_content."<br>";
     	}
     ?>
 </div>

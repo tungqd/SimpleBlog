@@ -19,6 +19,7 @@
     	echo $title;
     	echo "<br><br>";
     	echo $blog_content."<br>";
+    	echo "Comments:"."<br>";
     	
     	/* Display array of comments */
     	for ($i = 1; $i < count($mostRecentEntry); $i++)
@@ -32,10 +33,10 @@
     		{
     			$comment_content .= $comment_array[$j] . "<br>";
        		}	   
-       		echo "Comment:"."<br>";
+       	
        		echo $comment_name;
     		echo "<br>";
-    		echo $comment_content;
+    		echo $comment_content."<br>";
     	}
        		
     ?>

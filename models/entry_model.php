@@ -37,9 +37,13 @@ function addEntry($timestamp, $title, $content)
 /**
 This function adds a comment for a paticular entry
 */
-function addComment($entryTimestamp, $commentTimestamp, $name, $comment)
+function addComment($index, $commentTimestamp, $name, $comment)
 {
-	$file = "./entries/" . $entryTimestamp . "/$commentTimestamp" . ".txt";
+	$path = "./entries/";
+	$entries = getDirEntries($path);
+	rsort($entries);
+	$path = $path . "/{$entries[$index]}";
+	$file = $path . "/$commentTimestamp" . ".txt";
 	file_put_contents($file, $name . "\n");
   	file_put_contents($file, $comment . "\n", FILE_APPEND);
 }
@@ -102,9 +106,16 @@ Deletes a comment
 @param $entryTimestamp the entry
 @param $commentTimestamp the comment to be deleted 
 */
-function deleteComment($entryTimestamp, $commentTimestamp)
+function deleteComment($entryIndex, $commentIndex)
 {
-	$path = "./entries/" . $entryTimestamp . "/$commentTimestamp.txt";
+	$path = "./entries/";
+	$entries = getDirEntries($path);
+	rsort($entries);
+	$path = $path . "/{$entries[$entryIndex]}";
+	$comments = getDirEntries($path);
+	rsort($comments);
+	
+	$path = $path . "/{$comments[$commentIndex]}";
 	unlink($path);
 }
 
@@ -112,9 +123,12 @@ function deleteComment($entryTimestamp, $commentTimestamp)
 Deletes an entry
 @param $entryTimestamp the entry to be deleted
 */
-function deleteEntry($entryTimestamp)
+function deleteEntry($index)
 {
-	$path = "./entries/" . $entryTimestamp;
+	$path = "./entries/";
+	$entries = getDirEntries($path);
+	rsort($entries);
+	$path = $path . "/{$entries[$index]}";
 	$files = getDirEntries($path);
 	foreach($files as $file)
 	{
@@ -135,7 +149,7 @@ function getDirEntries($path)
 	{
     		while (false !== ($entry = readdir($handle))) 
     		{
-        		if ($entry != "." && $entry != ".." && $entry != ".DS_Store") 
+        		if ($entry != "." && $entry != ".." && $entry != ".DS_Store" && $entry != "blog.txt") 
         		{
             		$entries[] = $entry;
         		}

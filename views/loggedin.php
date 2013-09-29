@@ -85,12 +85,12 @@
 			<input type="hidden" name="view" value="blogview">
 			<input type="hidden" name="e" value="displayEntry">
 			<input type="hidden" name="a" value="<?php echo $i ?>">
-    		<input type="submit" value="<? echo $title ?>">
-    		<form action="index.php" method="GET"> 
+    		<input type="submit" value="<? echo $title ?>"> 		
+		</form>
+		<form action="index.php" method="GET"> 
 				<input type="hidden" name="c" value="main">
 				<input type="hidden" name="view" value="notloggedin">
     			<input type="submit" value="Delete">
-			</form>
 		</form>
     <?php
     	}

@@ -89,7 +89,7 @@
     		<input type="submit" value="<? echo $title ?>"> 		
     	</div>
 		</form>
-		
+	<?php if ($i !== count($data)-1) { ?>
 		<form action="index.php" method="GET"> 
 		<div id="Delete">
 				<input type="hidden" name="c" value="main">
@@ -99,7 +99,8 @@
     			<input type="submit" value="Delete">
     	</div>
 		</form>
-    <?php
+	<?php 
+		} 
     	}
     ?>
 </div>

@@ -35,3 +35,31 @@ font-size: 16px;
 float: right;
 }
 
+#Entryview
+{
+    float:left;
+}
+#blogViewNewest
+{
+color: white; 
+width: 700px;
+font-family:Lucida Sans Unicode;
+font-size: 20px;
+font-style: italic;
+border-style:inset;
+background: url(background-textures-black-texture-paper.jpg);
+overflow:hidden;
+}
+
+#blogViewComment
+{
+color: black;
+font-style: bold;
+background: url(light-wooden-background.jpg);
+overflow:hidden;
+}
+
+#addComment
+{float:right;}
+
+

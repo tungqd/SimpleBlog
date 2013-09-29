@@ -41,13 +41,5 @@ function blogController(){
 function addBlogPost($timestamp, $title, $content) {
 	addEntry($timestamp, $title, $content);
 }
-
-/**
-* This function updates $data to the latest entry 
-*
-*/
-function updateAllEntries() {
-	global $data;
-	$data = getAllEntries();
-}	
+	
 ?>

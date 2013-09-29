@@ -8,10 +8,11 @@
 *
 *
 */
-
-//require_once("./config/config.php");
-
 session_start();
+
+require_once("./config/config.php");
+
+
 $controllers_available= array('main','login','blog');
 
 //deciding the controller to be run

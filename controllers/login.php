@@ -21,7 +21,7 @@ function loginController(){
      		//update new $data with most recent entry
      		global $data;	
      		include ('./models/entry_model.php');	
-			$data = getAllEntries();
+			updateAllEntries();
           	$_SESSION["logged"]=("loggedin");
           	$_SESSION["view"]=("loggedin");
      	} else { 

@@ -94,6 +94,8 @@
 		<div id="Delete">
 				<input type="hidden" name="c" value="main">
 				<input type="hidden" name="view" value="notloggedin">
+				<input type="hidden" name="e" value="deleteEntry">
+				<input type="hidden" name="a" value="<?php echo $i ?>">
     			<input type="submit" value="Delete">
     	</div>
 		</form>

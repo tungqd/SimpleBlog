@@ -47,7 +47,8 @@
         Name<input type="text" name="name"/><br>
         Comment<input type="text" name="comment"/>
         	<input type="hidden" name="ac" value="addComment">
-			<input type="hidden" name="e" value="<?php echo time(); ?>">
+        	<input type="hidden" name="e" value="<?php echo $_GET["a"]; ?>">
+			<input type="hidden" name="t" value="<?php echo time(); ?>">
     		<input type="submit" value="Submit comment">
     	</form>
     </form>

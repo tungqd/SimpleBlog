@@ -24,17 +24,25 @@ function mainController(){
 	//processEntry($entry);		
 	//$entrylist = getAllEntries();
 	if (isset($_POST["ac"]) && $_POST["ac"] == "addComment") {
-		//addAComment($_POST["e"], $_POST["name"], $_POST["comment"]);
+		addAComment($_POST["e"], $_POST["t"], $_POST["name"], $_POST["comment"]);
+		updateAllEntries();
 		$_SESSION["view"] = "blogview";
+		$_GET["a"] = $_POST["e"];
+	}
+	else if (isset($_GET["e"]) && $_GET["e"] == "deleteEntry") {
+		deleteAnEntry($_GET["a"]);
+		updateAllEntries();
+		$_SESSION["view"] = "loggedin";
 	}
 	else {
 		$_SESSION["view"] = "notloggedin";
 		}
 }
 
-function addAComment($ctimestamp, $name, $comment) {		
-	global $time;
-	$etimestamp = $time[count($timestamps)-1];
-	addComment($etimestamp, $ctimestamp, $name, $comment);
+function addAComment($index, $timestamp, $name, $comment) {		
+	addComment($index, $timestamp, $name, $comment);
+}
+function deleteAnEntry($i) {
+	deleteEntry($i);
 }
 ?>

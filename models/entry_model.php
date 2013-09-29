@@ -134,6 +134,7 @@ function deleteEntry($index)
 	{
 		unlink($path . "/$file");
 	} 
+	unlink ($path. "/blog.txt");
 	rmdir($path); 
 }
 

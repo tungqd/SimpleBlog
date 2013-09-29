@@ -8,12 +8,9 @@
 *
 *
 */
-$time;
 include ("./models/entry_model.php");
 
 function blogController(){	
-	global $time;
-	$time[0] = 0;
 	updateAllEntries();
 	
 	//display blog entry
@@ -22,7 +19,6 @@ function blogController(){
 	} 
 	//Entry is added
 	else if (isset($_POST["ac"]) && $_POST["ac"] == "addEntry"){
-		$time[] = $_POST["e"];
 		addBlogPost($_POST["e"], $_POST["title"], $_POST["content"]);
 		updateAllEntries();
 		$_SESSION['view'] = "loggedin";

@@ -9,8 +9,6 @@
 *
 */
 
-//not signed in
-$_SESSION["logged"]= ("guest");
 
 function loginController(){
 	global $USER;
@@ -22,10 +20,8 @@ function loginController(){
      		global $data;	
      		include ('./models/entry_model.php');	
 			updateAllEntries();
-          	$_SESSION["logged"]=("loggedin");
           	$_SESSION["view"]=("loggedin");
      	} else { 
-          	$_SESSION["logged"]= "invalid";
           	$_SESSION["view"]=("loginscreen");
      	}
     }

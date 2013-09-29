@@ -53,9 +53,20 @@
        	
        		echo $comment_name;
     		echo "<br>";
-    		echo $comment_content."<br>";
-    	}
+    		echo $comment_content;
+    		
     ?>
+    	<!-- "Delete" comment button -->
+    	<form action="index.php" method="GET"> 
+			<input type="hidden" name="c" value="main">
+			<input type="hidden" name="view" value="notloggedin">
+    		<input type="submit" value="Delete">
+		</form>
+    	
+<?php  
+		}
+	 
+?>
 </div>
 
 
@@ -63,20 +74,26 @@
 <div id="list">
     <b>Entry list<br></b>
     <?php 
-    	for ($i=0; $i < count($data); $i++) {
+    	/* Loop to display list of entries */
+    	for ($i=0; $i < count($data); $i++) 
+    	{
     		$title = $data[$i][0][0];  
     ?>
     
-    <!-- Loop to display list of entries -->
-    <form action="index.php" method="GET">
-		<input type="hidden" name="c" value="blog">
-		<input type="hidden" name="view" value="blogview">
-		<input type="hidden" name="e" value="displayEntry">
-		<input type="hidden" name="a" value="<?php echo $i ?>">
-    	<input type="submit" value="<? echo $title ?>">
-	</form>
+   		<form action="index.php" method="GET">
+			<input type="hidden" name="c" value="blog">
+			<input type="hidden" name="view" value="blogview">
+			<input type="hidden" name="e" value="displayEntry">
+			<input type="hidden" name="a" value="<?php echo $i ?>">
+    		<input type="submit" value="<? echo $title ?>">
+    		<form action="index.php" method="GET"> 
+				<input type="hidden" name="c" value="main">
+				<input type="hidden" name="view" value="notloggedin">
+    			<input type="submit" value="Delete">
+			</form>
+		</form>
     <?php
-    }
+    	}
     ?>
 </div>
 

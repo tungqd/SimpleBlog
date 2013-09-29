@@ -10,7 +10,7 @@
 */
 session_start();
 
-require_once("./config/config.php");
+require_once('./config/config.php');
 
 
 $controllers_available= array('main','login','blog');
@@ -62,7 +62,7 @@ function displayView($viewname){
 <meta name="keywords" content="HW2, blog, MVC" />
 <meta charset="utf-8" />
 <meta name="ROBOTS" content="NOINDEX, NOFOLLOW"/>
-<link rel="stylesheet" type="text/css" href="./css/styles.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo BASEURL;?>/css/styles.css" />
 </head>
 <body>
 	

@@ -9,8 +9,12 @@
 *
 */
 
-//include ("./models/entry_model.php");
+define ("BASEURL", "./");
 
+/**
+* This function update $data when change is made
+* return $data
+*/
 function updateAllEntries() {
 	global $data;
 	$data = getAllEntries();

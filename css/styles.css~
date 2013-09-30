@@ -9,27 +9,36 @@ body {
   font-family: "Helvetica Neue", Helvetica;
 }
 
-
-form.blogViewComment{
-    display: inline;
-}
-
-#newest
-{
+#newestEntry, #entryView {
 /*height:300px;*/
-color: white; 
+color: #333; 
 width:650px;
 border: 2px solid #d4d4d4;
+background-image: -webkit-linear-gradient( #ffffff , #e5eecc 100px);
 float:left;
 font-family:Lucida Sans Unicode;
 font-size: 20px;
-font-style: italic;
 border-style:inset;
 overflow:hidden;
 }
 
-#newestBlog {
-background: url(background-textures-black-texture-paper.jpg);
+form.blogViewComment{
+    display: inline;
+}
+#newestBlog, #blogViewNewest {
+
+font-size: 110%;
+font-family: "courier new";
+height: auto;
+text-overflow: clip;
+}
+
+#blogComment {
+color: black;
+font-style: bold;
+width: 100%;
+overflow:hidden;
+float:left;
 }
 
 #list {
@@ -47,6 +56,17 @@ font-family:"Helvetica Neue", Helvetica;
 font-size: 16px;
 }
 
+.blogTitle {
+font-size: 30px;
+color: #005a8b;
+}
+
+.blogContent {
+border: 1px solid #d4d4d4;
+width: 100%;
+border-radius: 5px;
+background-color: #ffffff;
+}
 .listTitle  {
 font-size: 30px;
 color: blue;
@@ -54,33 +74,11 @@ color: blue;
 }
 
 .commentTitle {
-font-size: 30px;
+font-size: 25px;
 color: #617f10;
 }
 #entryList {
 float: right;
-}
-
-#Entryview {
-float:left;
-}
-#blogViewNewest {
-color: white; 
-width: 700px;
-font-family:Lucida Sans Unicode;
-font-size: 20px;
-font-style: italic;
-border-style:inset;
-background: url(background-textures-black-texture-paper.jpg);
-overflow:hidden;
-}
-
-#blogComment {
-color: black;
-font-style: bold;
-background-image: -webkit-linear-gradient( #ffffff , #e5eecc 100px);
-overflow:hidden;
-float:left;
 }
 
 #addComment {

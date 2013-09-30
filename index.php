@@ -63,6 +63,7 @@ function displayView($viewname){
 <meta charset="utf-8" />
 <meta name="ROBOTS" content="NOINDEX, NOFOLLOW"/>
 <link rel="stylesheet" type="text/css" href="<?php echo BASEURL;?>/css/styles.css" />
+<link rel="shortcut icon" href="favicon.ico"/>
 </head>
 <body>
 	

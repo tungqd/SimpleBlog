@@ -85,7 +85,7 @@ color: #617f10;
 float:left;
 }
 
-#right {
+.right {
 float: right;
 }
 #loginButton, #logoutButton, #addEntryButton {

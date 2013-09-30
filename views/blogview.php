@@ -1,26 +1,4 @@
-<?php 
-if (!isset($_SESSION["loggedIn"])) {
-?>
-<!-- "Login" button-->
-<form action="index.php" method="GET">
-	<input type="hidden" name="c" value="login">
-	<input type="hidden" name="view" value="loginscreen">
-	<input type="hidden" name="ac" value="login">
-    <input type="submit" value="Login">
-</form>
-<?php
-} else { 
-?>
-<!-- "Logout" button -->
-<form action="index.php" method="GET">
-	<input type="hidden" name="c" value="login">
-	<input type="hidden" name="view" value="notloggedin">
-	<input type="hidden" name="ac" value="logout">
-    <input type="submit" value="Logout">
-</form>
-<?php 
-} 
-?>
+
 <div id="entryView">
 	<div id="blogViewNewest">
     	<table>
@@ -68,19 +46,52 @@ if (!isset($_SESSION["loggedIn"])) {
 	
 </div>
 
-
+<div class="right">
+<table>
+<?php 
+if (!isset($_SESSION["loggedIn"])) {
+?>
+<tr><td>
+<div id="loginButton">
+<!-- "Login" button-->
+<form action="index.php" method="GET">
+	<input type="hidden" name="c" value="login">
+	<input type="hidden" name="view" value="loginscreen">
+	<input type="hidden" name="ac" value="login">
+    <input type="submit" value="Login">
+</form>
+</div>
+<?php
+} else { 
+?>
+<div id="logoutButton">
+<!-- "Logout" button -->
+<form action="index.php" method="GET">
+	<input type="hidden" name="c" value="login">
+	<input type="hidden" name="view" value="notloggedin">
+	<input type="hidden" name="ac" value="logout">
+    <input type="submit" value="Logout">
+</form>
+</td></tr></div>
+<?php 
+} 
+?>
+</div>
 <div id="addComment">
+<tr><td>
     <!-- Add comment section -->
     <form name="add" action="index.php?c=main" id="addComm" method="POST">
     	<input type="hidden" name="ac" value="addComment">
         <input type="hidden" name="e" value="<?php echo $_GET["e"]; ?>">
 		<input type="hidden" name="t" value="<?php echo time(); ?>">
-        Name<input type="text" name="name"/><br>
+        Name: <input type="text" name="name"/><br>
         Content: <br>
         <textarea rows="4" cols="50" name="comment" form="addComm"></textarea>
+        <br>
     	<input type="submit" value="Submit comment">
 
     	</form>
-    </form>    
+    </form> 
+</td></tr>   
 </div>
-
+</div>

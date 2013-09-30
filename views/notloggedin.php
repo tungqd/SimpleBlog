@@ -20,7 +20,7 @@
     </div>
 </div>
 
-<div id="right">
+<div class="right">
 <table>
 <tr><td>
 <!-- "Login" button-->

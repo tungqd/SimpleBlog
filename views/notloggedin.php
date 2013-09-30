@@ -1,4 +1,5 @@
-<div id="newest">
+<div id="newestEntry">
+	<div id="newestBlog">
 
     <?php 	
     	$mostRecentEntry = $data[0];//Assign the latest entry in $data into $mostRecentEntry
@@ -19,8 +20,12 @@
     	echo $title;
     	echo "<br><br>";
     	echo $blog_content."<br>";
-    	echo "Comments:"."<br>";
     	
+    ?>
+	</div>
+	<div id="blogComment" >    	
+	<b class="commentTitle"> Comments: </b><br>
+	<?php
     	/* Display array of comments */
     	for ($i = 1; $i < count($mostRecentEntry); $i++)
     	{
@@ -39,9 +44,11 @@
     	}
        		
     ?>
+    </div>
 </div>
-<div id="loginButton">
+
 <!-- "Login" button-->
+<div id="loginButton">
 <form action="index.php" method="GET">
 	<input type="hidden" name="c" value="login">
 	<input type="hidden" name="view" value="loginscreen">
@@ -51,7 +58,7 @@
 </div>
 <!-- Entry list -->
 <div id="list">
-    <b>Entry list<br></b>
+    <b class="listTitle">Entry list</b><br>
     <?php 
     	for ($i=0; $i < count($data); $i++) {
     		$title = $data[$i][0][0];  

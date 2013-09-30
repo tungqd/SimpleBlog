@@ -71,7 +71,7 @@
 
 <!-- Entry list -->
 <div id="list">
-    <b>Entry list<br></b>
+    <b id="listTitle">Entry list<br></b>
     <?php 
     	/* Loop to display list of entries */
     	for ($i=0; $i < count($data); $i++) 

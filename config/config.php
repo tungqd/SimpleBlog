@@ -8,7 +8,6 @@
 *
 *
 */
-
 define ("BASEURL", "./");
 
 //require_once ('./models/authenticate.php');

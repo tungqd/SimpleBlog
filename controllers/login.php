@@ -8,19 +8,21 @@
 *
 *
 */
-
-
+require_once "./models/authenticate.php";
 function loginController(){
 	global $USER;
-	include ('./models/authenticate.php');
 	//Login form is submitted
-	if ($_POST["ac"]=="log") {
+	if (isset($_POST["ac"]) && $_POST["ac"]=="log") {
      	if (verifyUser($_POST["userid"],$_POST["pw"])) {
+			if (isset($_SESSION["Usage"])) {
+				unset($_SESSION["Usage"]);
+			}
      		global $data;	
      		include ('./models/entry_model.php');	
 			updateAllEntries();
           	$_SESSION["view"]=("loggedin");
      	} else { 
+			$_SESSION["Usage"] = "error";
           	$_SESSION["view"]=("loginscreen");
      	}
     }
@@ -28,7 +30,7 @@ function loginController(){
 
 		$_SESSION["view"]=("loginscreen");
     }
-	}
+}
 
 
 ?>

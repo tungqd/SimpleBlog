@@ -8,7 +8,6 @@
 *
 *
 */
-
 /**
 This function adds an entry to the data model.
 @param $timestamp the time entry was written.

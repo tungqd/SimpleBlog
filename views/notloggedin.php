@@ -63,7 +63,7 @@
 		<input type="hidden" name="view" value="blogview">
 		<input type="hidden" name="ac" value="displayEntry">
 		<input type="hidden" name="e" value="<?php echo $i ?>">
-    	<input type="submit" value="<? echo $title ?>">
+    	<input type="submit" value="<?php echo $title ?>">
 	</form>
     <?php
     }

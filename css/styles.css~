@@ -133,8 +133,10 @@ line-height: 90px;
 vertical-align: middle;
 }
 
-#LoginArea {
+#LoginScreenView {
 float:left;
 }
+
+
 
 

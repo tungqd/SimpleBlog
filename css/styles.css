@@ -81,7 +81,7 @@ font-size: 25px;
 color: #617f10;
 }
 
-#addComment {
+#addComment, #deleteCommentButton, #commentLine {
 float:left;
 }
 
@@ -92,16 +92,6 @@ float: right;
 float:right;
 margin: 5px 20px;
 }
-
-
-#commentLine{
-float: left;
-}
-
-#deleteCommentButton {
-float:left;
-}
-
 
 #entryList {
 width:100%;

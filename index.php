@@ -75,4 +75,39 @@ function displayView($viewname){
 </html>
 <?php
 }
+/*
+* This function render entry at index $i from $list_items and returns an array
+*
+*/
+function entry_drawer($list_items, $i) {
+	$entry = $list_items[$i];//Assign the latest entry into $mostRecentEntry       	
+    //Blog array has title and several lines of content
+    $blog = $entry[0]; 
+    $title = $blog[0];
+    $blog_content = "";	
+    	
+    /* Add and append content to $blog_content through loop */
+    for ($i = 1; $i < count($blog); $i++)    	
+	{		
+		$blog_content .= $blog[$i] . "<br>";
+    }
+    $blog_entry = array($title, $blog_content);
+    
+    /* Array of comments */
+    for ($i = 1; $i < count($entry); $i++)
+    {
+    	$comment_array = $entry[$i];
+    	$comment_name = $comment_array[0];
+    	$comment_content = "";
+    		
+    	/* Add and append content line in EACH comment */
+    	for ($j = 1; $j < count($comment_array); $j++)
+    	{
+    		$comment_content .= $comment_array[$j] . "<br>";
+       	}	   
+       	$comments = $comment_name .": ".$comment_content;
+       	$blog_entry[] = ($comments);
+    }
+    return $blog_entry; 
+}
 ?>

@@ -24,47 +24,22 @@ if (!isset($_SESSION["loggedIn"])) {
 <div id="entryView">
 	<div id="blogViewNewest">
     	<table>
-    	<!-- Display entry itself -->
-		<?php 	
-			$entry = $data[$_GET["e"]];
-    		$blog = $entry[0];
-    		$title = $blog[0];
-    		$content = "";
-    	
-    		for ($i = 1; $i < count($blog); $i++)
-    		{
-    			$content .= $blog[$i] . "<br>";
-    		}
-    	
+   	 	<?php 	
+    		$blog_entry = entry_drawer($data,$_GET["e"]);
     	?> 
-    	 <tr><th class="blogTitle"> <b> <?php echo $title;?> </b> </th></tr>
-    	<tr><td class="blogContent"> <?php echo $content;?><td></tr>   	
+    	<tr><th class="blogTitle"> <b> <?php echo $blog_entry[0];?> </b> </th></tr>
+    	<tr><td class="blogContent"> <?php echo $blog_entry[1];?><td></tr>   	
     	</table>
 	</div>
-
-
+	<div id="blogComment" >    	
+	<b class="commentTitle"> Comments: </b><br>
+	<table>
+	<?php
+		for ($i = 2; $i < count($blog_entry); $i++) {
+	?>
+		<tr><td><?php echo $blog_entry[$i];?> </td>
 	
-	<div id="blogComment">
-		<b class="commentTitle"> Comments: </b><br>
-		<table>
-		<div id="commentLine"> 
-    	<!-- Display array of comments-->
-   		<?php
-    		for ($i = 1; $i < count($entry); $i++)
-    		{
-    			$comment_array = $entry[$i];
-    			$comment_name = $comment_array[0];
-    			$comment_content = "";
-    		
-    			/* Add and append content line in EACH comment */
-    			for ($j = 1; $j < count($comment_array); $j++)
-    			{
-    				$comment_content .= $comment_array[$j] . "<br>";
-       			}	   
-       		?>	
-       		<tr><td> <?php echo $comment_name.":".$comment_content;?> </td>   	
-       	</div>
-       	<td>
+    </div><td>
        	<div id="commentFormat">
        	<?php	
      		
@@ -78,16 +53,16 @@ if (!isset($_SESSION["loggedIn"])) {
 					<input type="hidden" name="view" value="loggedin">
 					<input type="hidden" name="ac" value="deleteComment">
 					<input type="hidden" name="ei" value="<?php echo $_GET["e"]; ?>">
-					<input type="hidden" name="ci" value="<?php echo $i-1;?>">
+					<input type="hidden" name="ci" value="<?php echo $i-2;?>">
     				<input type="submit" value="Delete">
 				</form>
    		<?php
    				}	
    		?>    	
         </div></td></tr>
-    	<?php 
-    		} 
-    	?>  	
+    	<?php	
+		}   	
+    ?>
     	</table>
 	</div>
 	

@@ -3,46 +3,19 @@
 	<div id="newestBlog">
 	<table>
     <?php 	
-    	$mostRecentEntry = $data[0];//Assign the latest entry in $data into $mostRecentEntry
-    
-    	/* Display entry itself */
-    	
-    		//Blog array has title and several lines of content
-    		$blog = $mostRecentEntry[0]; 
-    		$title = $blog[0];
-    		$blog_content = "";	
-    	
-    		/* Add and append content to $blog_content through loop */
-    		for ($i = 1; $i < count($blog); $i++)    	
-			{		
-				$blog_content .= $blog[$i] . "<br>";
-    		}
-    	
+    	$blog_entry = entry_drawer($data,0);
     ?> 
-    <tr><th class="blogTitle"> <b> <?php echo $title;?> </b> </th></tr>
-    <tr><td class="blogContent"> <?php echo $blog_content;?><td></tr>   	
+    <tr><th class="blogTitle"> <b> <?php echo $blog_entry[0];?> </b> </th></tr>
+    <tr><td class="blogContent"> <?php echo $blog_entry[1];?><td></tr>   	
     </table>
 	</div>
 	<div id="blogComment" >    	
 	<b class="commentTitle"> Comments: </b><br>
 	<?php
-    	/* Display array of comments */
-    	for ($i = 1; $i < count($mostRecentEntry); $i++)
-    	{
-    		$comment_array = $mostRecentEntry[$i];
-    		$comment_name = $comment_array[0];
-    		$comment_content = "";
-    		
-    		/* Add and append content line in EACH comment */
-    		for ($j = 1; $j < count($comment_array); $j++)
-    		{
-    			$comment_content .= $comment_array[$j] . "<br>";
-       		}	   
-       	
-       		echo $comment_name.":".$comment_content."<br>";
-       	
-    	}
-       		
+		for ($i = 2; $i < count($blog_entry); $i++) {
+			echo $blog_entry[$i]."<br>";
+		}
+    	
     ?>
     </div>
 </div>

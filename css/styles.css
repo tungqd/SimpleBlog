@@ -14,6 +14,7 @@ body {
 color: #333; 
 width:650px;
 border: 2px solid #d4d4d4;
+background-image: -webkit-linear-gradient( #ffffff , #e5eecc 100px);
 float:left;
 font-family:Lucida Sans Unicode;
 font-size: 20px;
@@ -26,14 +27,16 @@ form.blogViewComment{
 }
 #newestBlog, #blogViewNewest {
 
-border: 1px solid #d4d4d4;
+font-size: 110%;
+font-family: "courier new";
+height: auto;
+text-overflow: clip;
 }
 
 #blogComment {
 color: black;
 font-style: bold;
 width: 100%;
-background-image: -webkit-linear-gradient( #ffffff , #e5eecc 100px);
 overflow:hidden;
 float:left;
 }
@@ -71,7 +74,7 @@ color: blue;
 }
 
 .commentTitle {
-font-size: 30px;
+font-size: 25px;
 color: #617f10;
 }
 #entryList {

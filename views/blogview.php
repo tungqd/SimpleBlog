@@ -23,7 +23,7 @@ if (!isset($_SESSION["loggedIn"])) {
 ?>
 <div id="entryView">
 	<div id="blogViewNewest">
-    
+    	<table>
     	<!-- Display entry itself -->
 		<?php 	
 			$entry = $data[$_GET["e"]];
@@ -36,16 +36,16 @@ if (!isset($_SESSION["loggedIn"])) {
     			$content .= $blog[$i] . "<br>";
     		}
     	
-    		echo $title;
-    		echo "<br><br>";
-    		echo $content."<br>";
     	?> 
+    	 <tr><th class="blogTitle"> <b> <?php echo $title;?> </b> </th></tr>
+    	<tr><td class="blogContent"> <?php echo $content;?><td></tr>   	
+    	</table>
 	</div>
 
 
 
 	<div id="blogComment">
-    	<b>Comments</b><br>
+    	<b class="commentTitle"> Comments: </b><br>
     
     	<!-- Display array of comments-->
    		<?php

@@ -16,7 +16,7 @@
 
 <div id="newestEntry">
 	<div id="newestBlog">
-
+	<table>
     <?php 	
     	$mostRecentEntry = $data[0];//Assign the latest entry in $data into $mostRecentEntry
     
@@ -33,11 +33,10 @@
 				$blog_content .= $blog[$i] . "<br>";
     		}
     	
-    	echo $title;
-    	echo "<br><br>";
-    	echo $blog_content."<br>";
-    	
-    ?>
+    ?> 
+    <tr><th class="blogTitle"> <b> <?php echo $title;?> </b> </th></tr>
+    <tr><td class="blogContent"> <?php echo $blog_content;?><td></tr>   	
+    </table>
 	</div>
 	<div id="blogComment" >    	
 	<b class="commentTitle"> Comments: </b><br>
@@ -56,11 +55,12 @@
        		}	   
        	
        		echo $comment_name.":".$comment_content."<br>";
-    		
+       	
+    	}
+       		
     ?>
     </div>
-</div>  
-
+</div>
 
 <!-- Entry list -->
 <div id="list">

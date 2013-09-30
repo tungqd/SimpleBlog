@@ -22,9 +22,7 @@ border-style:inset;
 overflow:hidden;
 }
 
-form.blogViewComment{
-    display: inline;
-}
+
 #newestBlog, #blogViewNewest {
 
 font-size: 110%;

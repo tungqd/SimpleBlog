@@ -62,8 +62,8 @@ if (!isset($_SESSION["loggedIn"])) {
        			}	   
        	
        			echo $comment_name.":".$comment_content;   			
-    		//only display delete comment button if loggedin	
-    		if (isset($_SESSION['loggedIn'])) {
+    			//only display delete comment button if loggedin	
+    			if (isset($_SESSION['loggedIn'])) {
     	?>
     			<!-- "Delete" comment button -->
     			
@@ -76,7 +76,7 @@ if (!isset($_SESSION["loggedIn"])) {
     				<input type="submit" value="Delete">
 				</form>
    		<?php
-   		}
+   				}
         	}
     	?>
 	</div>

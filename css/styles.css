@@ -14,6 +14,7 @@ body {
 color: #333; 
 width:650px;
 border: 2px solid #d4d4d4;
+background-image: -webkit-linear-gradient( #ffffff , #e5eecc 100px);
 background-image: linear-gradient( #ffffff , #e5eecc 100px);
 float:left;
 font-family:Lucida Sans Unicode;
@@ -22,7 +23,9 @@ border-style:inset;
 overflow:hidden;
 }
 
-
+form.blogViewComment{
+    display: inline;
+}
 #newestBlog, #blogViewNewest {
 
 font-size: 110%;

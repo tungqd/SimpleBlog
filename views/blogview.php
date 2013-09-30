@@ -21,7 +21,7 @@ if (!isset($_SESSION["loggedIn"])) {
 <?php 
 } 
 ?>
-<div id="Entryview">
+<div id="entryView">
 	<div id="blogViewNewest">
     
     	<!-- Display entry itself -->

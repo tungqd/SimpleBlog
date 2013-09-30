@@ -14,12 +14,11 @@
 </form>
 
 
-<!-- Entry panel -->
-<div id="newest">
-    <!-- <b>Most recent entry<br></b> -->
+<div id="newestEntry">
+	<div id="newestBlog">
 
     <?php 	
-    	$mostRecentEntry = $data[0]; //Assign the latest entry in $data into $mostRecentEntry
+    	$mostRecentEntry = $data[0];//Assign the latest entry in $data into $mostRecentEntry
     
     	/* Display entry itself */
     	
@@ -37,8 +36,12 @@
     	echo $title;
     	echo "<br><br>";
     	echo $blog_content."<br>";
-    	echo "Comments:"."<br>";
     	
+    ?>
+	</div>
+	<div id="blogComment" >    	
+	<b class="commentTitle"> Comments: </b><br>
+	<?php
     	/* Display array of comments */
     	for ($i = 1; $i < count($mostRecentEntry); $i++)
     	{
@@ -54,21 +57,12 @@
        	
        		echo $comment_name;
     		echo "<br>";
-    		echo $comment_content;
-    		
+    		echo $comment_content."<br>";
+    	}
+       		
     ?>
-    	<!-- "Delete" comment button 
-    	<form action="index.php" method="GET"> 
-			<input type="hidden" name="c" value="main">
-			<input type="hidden" name="view" value="notloggedin">
-    		<input type="submit" value="Delete">
-		</form>
-    	-->
-<?php  
-		}
-	 
-?>
-</div>
+    </div>
+</div>  
 
 
 <!-- Entry list -->

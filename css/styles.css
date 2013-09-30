@@ -14,15 +14,19 @@ body {
 color: #333; 
 width:650px;
 border: 2px solid #d4d4d4;
+background-image: -webkit-linear-gradient( #ffffff , #e5eecc 100px);
 background-image: linear-gradient( #ffffff , #e5eecc 100px);
 float:left;
 font-family:Lucida Sans Unicode;
 font-size: 20px;
 border-style:inset;
 overflow:hidden;
+box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
-
+form.blogViewComment{
+    display: inline;
+}
 #newestBlog, #blogViewNewest {
 
 font-size: 110%;
@@ -52,6 +56,7 @@ float:right;
 text-align: left;
 font-family:"Helvetica Neue", Helvetica;
 font-size: 16px;
+box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
 .blogTitle {
@@ -97,5 +102,9 @@ float: left;
 float:left;
 }
 
+
+#entryList {
+width:100%;
+}
 
 

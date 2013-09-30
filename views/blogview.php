@@ -1,3 +1,26 @@
+<?php 
+if (!isset($_SESSION["loggedIn"])) {
+?>
+<!-- "Login" button-->
+<form action="index.php" method="GET">
+	<input type="hidden" name="c" value="login">
+	<input type="hidden" name="view" value="loginscreen">
+	<input type="hidden" name="ac" value="login">
+    <input type="submit" value="Login">
+</form>
+<?php
+} else { 
+?>
+<!-- "Logout" button -->
+<form action="index.php" method="GET">
+	<input type="hidden" name="c" value="login">
+	<input type="hidden" name="view" value="notloggedin">
+	<input type="hidden" name="ac" value="logout">
+    <input type="submit" value="Logout">
+</form>
+<?php 
+} 
+?>
 <div id="Entryview">
 	<div id="blogViewNewest">
     
@@ -41,8 +64,12 @@
        			echo $comment_name;
     			echo "<br>";
     			echo $comment_content;
+    			
+    		//only display delete comment button if loggedin	
+    		if (isset($_SESSION['loggedIn'])) {
     	?>
     			<!-- "Delete" comment button -->
+    			
     			<form action="index.php" method="GET"> 
 					<input type="hidden" name="c" value="main">
 					<input type="hidden" name="view" value="loggedin">
@@ -52,6 +79,7 @@
     				<input type="submit" value="Delete">
 				</form>
    		<?php
+   		}
         	}
     	?>
 	</div>

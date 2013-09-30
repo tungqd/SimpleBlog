@@ -27,18 +27,20 @@ function mainController(){
 		$_SESSION["view"] = "blogview";
 		$_GET["e"] = $_POST["e"];
 	}
-	//Delete a comment
-	else if (isset($_GET["ac"]) && $_GET["ac"] == "deleteComment") {
-		deleteAComment($_GET["ei"], $_GET["ci"]);
-		updateAllEntries();
-		$_SESSION["view"] = "blogview";
-		$_GET["e"] = $_GET["ei"];
-	}
-	//Delete an entry
-	else if (isset($_GET["ac"]) && $_GET["ac"] == "deleteEntry") {
-		deleteAnEntry($_GET["e"]);
-		updateAllEntries();
-		$_SESSION["view"] = "loggedin";
+	else if (isset($_SESSION["loggedIn"])) {
+		//Delete a comment
+		if (isset($_GET["ac"]) && $_GET["ac"] == "deleteComment") {
+			deleteAComment($_GET["ei"], $_GET["ci"]);
+			updateAllEntries();
+			$_SESSION["view"] = "blogview";
+			$_GET["e"] = $_GET["ei"];
+		}
+		//Delete an entry
+		else if (isset($_GET["ac"]) && $_GET["ac"] == "deleteEntry") {
+			deleteAnEntry($_GET["e"]);
+			updateAllEntries();
+			$_SESSION["view"] = "loggedin";
+		}
 	}
 	else {
 		$_SESSION["view"] = "notloggedin";

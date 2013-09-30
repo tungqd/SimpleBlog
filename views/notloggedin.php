@@ -41,14 +41,15 @@
        		
     ?>
 </div>
-
+<div id="loginButton">
 <!-- "Login" button-->
 <form action="index.php" method="GET">
 	<input type="hidden" name="c" value="login">
 	<input type="hidden" name="view" value="loginscreen">
+	<input type="hidden" name="ac" value="login">
     <input type="submit" value="Login">
 </form>
-
+</div>
 <!-- Entry list -->
 <div id="list">
     <b>Entry list<br></b>

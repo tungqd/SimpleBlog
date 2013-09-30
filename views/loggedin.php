@@ -7,8 +7,9 @@
 
 <!-- "Logout" button -->
 <form action="index.php" method="GET">
-	<input type="hidden" name="c" value="main">
+	<input type="hidden" name="c" value="login">
 	<input type="hidden" name="view" value="notloggedin">
+	<input type="hidden" name="ac" value="logout">
     <input type="submit" value="Logout">
 </form>
 

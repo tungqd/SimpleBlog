@@ -67,7 +67,7 @@ if (!isset($_SESSION["loggedIn"])) {
     	?>
     			<!-- "Delete" comment button -->
     			
-    			<form action="index.php" method="GET"> 
+    			<form action="index.php" id="deleteComment" method="GET"> 
 					<input type="hidden" name="c" value="main">
 					<input type="hidden" name="view" value="loggedin">
 					<input type="hidden" name="ac" value="deleteComment">

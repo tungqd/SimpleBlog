@@ -43,9 +43,11 @@ if (!isset($_SESSION["loggedIn"])) {
 	</div>
 
 
-
+	
 	<div id="blogComment">
-    	<b class="commentTitle"> Comments: </b><br>
+		<b class="commentTitle"> Comments: </b><br>
+		<div id="commentLine">
+    	
     
     	<!-- Display array of comments-->
    		<?php
@@ -61,7 +63,12 @@ if (!isset($_SESSION["loggedIn"])) {
     				$comment_content .= $comment_array[$j] . "<br>";
        			}	   
        	
-       			echo $comment_name.":".$comment_content;   			
+       			echo $comment_name.":".$comment_content;   	
+       	?>
+       	</div>
+       	<div id="commentFormat">
+       	<?php	
+       		
     			//only display delete comment button if loggedin	
     			if (isset($_SESSION['loggedIn'])) {
     	?>
@@ -79,7 +86,9 @@ if (!isset($_SESSION["loggedIn"])) {
    				}
         	}
     	?>
+    	</div>
 	</div>
+	
 </div>
 
 

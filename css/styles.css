@@ -89,4 +89,13 @@ margin: 5px 20px;
 }
 
 
+#commentLine{
+float: left;
+}
+
+#deleteCommentButton {
+float:left;
+}
+
+
 

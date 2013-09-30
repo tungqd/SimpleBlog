@@ -14,7 +14,7 @@ body {
 color: #333; 
 width:650px;
 border: 2px solid #d4d4d4;
-background-image: -webkit-linear-gradient( #ffffff , #e5eecc 100px);
+background-image: linear-gradient( #ffffff , #e5eecc 100px);
 float:left;
 font-family:Lucida Sans Unicode;
 font-size: 20px;
@@ -22,9 +22,7 @@ border-style:inset;
 overflow:hidden;
 }
 
-form.blogViewComment{
-    display: inline;
-}
+
 #newestBlog, #blogViewNewest {
 
 font-size: 110%;
@@ -77,12 +75,27 @@ color: blue;
 font-size: 25px;
 color: #617f10;
 }
-#entryList {
-float: right;
-}
 
 #addComment {
 float:left;
 }
+
+#right {
+float: right;
+}
+#loginButton, #logoutButton, #addEntryButton {
+float:right;
+margin: 5px 20px;
+}
+
+
+#commentLine{
+float: left;
+}
+
+#deleteCommentButton {
+float:right;
+}
+
 
 

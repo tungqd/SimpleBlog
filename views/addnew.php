@@ -4,6 +4,6 @@
 		<input type="hidden" name="e" value="<?php echo time(); ?>">
         Title: <input type="text" name="title"/><br>
         Content: <br>
-        <textarea rows="4" cols="50" name="content" form="addBlog"></textarea>
+        <textarea rows="4" cols="50" name="content"></textarea>
     	<input type="submit" value="Submit">
 </form>

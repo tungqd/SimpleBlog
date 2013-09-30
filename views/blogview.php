@@ -48,10 +48,11 @@
 
 <div class="right">
 <table>
+<tr><td>
 <?php 
 if (!isset($_SESSION["loggedIn"])) {
 ?>
-<tr><td>
+
 <div id="loginButton">
 <!-- "Login" button-->
 <form action="index.php" method="GET">
@@ -72,7 +73,7 @@ if (!isset($_SESSION["loggedIn"])) {
 	<input type="hidden" name="ac" value="logout">
     <input type="submit" value="Logout">
 </form>
-</td></tr></div>
+</div></td></tr>
 <?php 
 } 
 ?>

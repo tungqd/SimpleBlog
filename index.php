@@ -32,18 +32,18 @@ else{
 $controller();
 
 function main(){
-	require_once("./controllers/main.php");
+	require_once($BASEURL."controllers/main.php");
 	mainController();
 	displayView($_SESSION['view']);
 }
 function login(){
-	require_once("./controllers/login.php");
+	require_once($BASEURL."controllers/login.php");
 	loginController();
 	displayView($_SESSION['view']);
 }
 
 function blog(){
-	require_once("./controllers/blog.php");
+	require_once($BASEURL."controllers/blog.php");
 	blogController();
 	displayView($_SESSION['view']);
 }
@@ -56,7 +56,7 @@ function displayView($viewname){
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
-<title>Simple Blog</title>
+<title>Simple Blog - <?php echo $viewname?></title>
 <meta name="Authors" content="Tung Dang, Loc Dang, Khanh Nguyen" />
 <meta name="description" content="Simple blog using MVC pattern for HW2 CS174" />
 <meta name="keywords" content="HW2, blog, MVC" />

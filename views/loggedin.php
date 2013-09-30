@@ -55,11 +55,8 @@
     			$comment_content .= $comment_array[$j] . "<br>";
        		}	   
        	
-       		echo $comment_name;
-    		echo "<br>";
-    		echo $comment_content."<br>";
-    	}
-       		
+       		echo $comment_name.":".$comment_content."<br>";
+    		
     ?>
     </div>
 </div>  

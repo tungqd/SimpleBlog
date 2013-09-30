@@ -21,6 +21,9 @@ border-style:inset;
 overflow:hidden;
 }
 
+form.blogViewComment{
+    display: inline;
+}
 #newestBlog, #blogViewNewest {
 
 border: 1px solid #d4d4d4;
@@ -29,6 +32,7 @@ border: 1px solid #d4d4d4;
 #blogComment {
 color: black;
 font-style: bold;
+width: 100%;
 background-image: -webkit-linear-gradient( #ffffff , #e5eecc 100px);
 overflow:hidden;
 float:left;

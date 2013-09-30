@@ -61,10 +61,7 @@ if (!isset($_SESSION["loggedIn"])) {
     				$comment_content .= $comment_array[$j] . "<br>";
        			}	   
        	
-       			echo $comment_name;
-    			echo "<br>";
-    			echo $comment_content;
-    			
+       			echo $comment_name.":".$comment_content;   			
     		//only display delete comment button if loggedin	
     		if (isset($_SESSION['loggedIn'])) {
     	?>

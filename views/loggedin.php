@@ -52,9 +52,7 @@
     			$comment_content .= $comment_array[$j] . "<br>";
        		}	   
        	
-       		echo $comment_name;
-    		echo "<br>";
-    		echo $comment_content;
+       		echo $comment_name.":".$comment_content."<br>";
     		
     ?>
     	<!-- "Delete" comment button 

@@ -44,7 +44,7 @@ if (!isset($_SESSION["loggedIn"])) {
 
 
 
-	<div id="blogViewComment">
+	<div id="blogComment">
     	<b>Comments</b><br>
     
     	<!-- Display array of comments-->

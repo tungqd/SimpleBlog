@@ -1,3 +1,6 @@
+body, p, h1, h2, h3, h4, table, td, th, ul, ol, textarea, input {
+font-family: helvetica,verdana,arial,sans-serif;
+}
 body {
   background: url(textture-noise.png);
   overflow: hidden;
@@ -6,41 +9,56 @@ body {
   font-family: "Helvetica Neue", Helvetica;
 }
 
-#newest
-{
+#newestEntry {
 /*height:300px;*/
 color: white; 
 width:650px;
+border: 2px solid #d4d4d4;
 float:left;
 font-family:Lucida Sans Unicode;
 font-size: 20px;
 font-style: italic;
 border-style:inset;
-background: url(background-textures-black-texture-paper.jpg);
 overflow:hidden;
 }
 
-#list
-{
+#newestBlog {
+background: url(background-textures-black-texture-paper.jpg);
+}
+
+#list {
 /*height:300px;*/
 width:300px;
-float:left;
-text-align: right;
+display: block;
+background-color: #F6F4F0;
+border: 1px solid #d4d4d4;
+border-radius: 2px;
+margin: 5px 20px;
+padding: 5px;
+float:right;
+text-align: left;
 font-family:"Helvetica Neue", Helvetica;
 font-size: 16px;
 }
 
-#entryList
-{
+.listTitle  {
+font-size: 30px;
+color: blue;
+
+}
+
+.commentTitle {
+font-size: 30px;
+color: #617f10;
+}
+#entryList {
 float: right;
 }
 
-#Entryview
-{
-    float:left;
+#Entryview {
+float:left;
 }
-#blogViewNewest
-{
+#blogViewNewest {
 color: white; 
 width: 700px;
 font-family:Lucida Sans Unicode;
@@ -51,18 +69,16 @@ background: url(background-textures-black-texture-paper.jpg);
 overflow:hidden;
 }
 
-#blogViewComment
-{
+#blogComment {
 color: black;
 font-style: bold;
-background: url(light-wooden-background.jpg);
+background-image: -webkit-linear-gradient( #ffffff , #e5eecc 100px);
 overflow:hidden;
+float:left;
 }
 
-#addComment
-{float:left;}
-
-#loginButton 
-{
-	
+#addComment {
+float:left;
 }
+
+

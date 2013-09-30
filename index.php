@@ -32,18 +32,18 @@ else{
 $controller();
 
 function main(){
-	require("./controllers/main.php");
+	require_once("./controllers/main.php");
 	mainController();
 	displayView($_SESSION['view']);
 }
 function login(){
-	require("./controllers/login.php");
+	require_once("./controllers/login.php");
 	loginController();
 	displayView($_SESSION['view']);
 }
 
 function blog(){
-	require("./controllers/blog.php");
+	require_once("./controllers/blog.php");
 	blogController();
 	displayView($_SESSION['view']);
 }
@@ -68,7 +68,7 @@ function displayView($viewname){
 	
 	<?php 
 		global $data;
-		include("./views/{$viewname}.php"); 
+		require_once("./views/{$viewname}.php"); 
 	?>
 
 </body>

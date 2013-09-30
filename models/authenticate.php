@@ -8,15 +8,6 @@
 *
 *
 */
-
-/**
-Checks if current user is logged in or not
-*/
-function isCurrentLoggedIn()
-{
-	return isset($_SESSION['loggedIn']);
-}
-
 /**
 Verifies if username is "pat" and password id "secret"
 */
@@ -38,10 +29,7 @@ destroys the session variable
 */
 function destroySession()
 {
-	if(isset($_SESSION['loggedIn']))
-	{
-  		unset($_SESSION['loggedIn']);
-  	}
+	session_destroy();
 }
 
 ?>

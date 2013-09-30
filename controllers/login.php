@@ -8,19 +8,22 @@
 *
 *
 */
-
-
+require_once "./models/authenticate.php";
 function loginController(){
 	global $data;	
-    include ('./models/entry_model.php');	
-	include ('./models/authenticate.php');
+    include ('./models/entry_model.php');
 	//Login form is submitted
 	if (isset($_POST["ac"]) && $_POST["ac"]=="log") {
      	if (verifyUser($_POST["userid"],$_POST["pw"])) {
-     		setSessionVariable(); 		
-			updateAllEntries();			
+			if (isset($_SESSION["Usage"])) {
+				unset($_SESSION["Usage"]);
+			}
+     		
+     		setSessionVariable(); 
+			updateAllEntries();
           	$_SESSION["view"]=("loggedin");
      	} else { 
+			$_SESSION["Usage"] = ("error");
           	$_SESSION["view"]=("loginscreen");
      	}
     }

@@ -1,3 +1,4 @@
+
 <div id="newestEntry">
 	<div id="newestBlog">
 	<table>
@@ -46,6 +47,9 @@
     </div>
 </div>
 
+<div id="right">
+<table>
+<tr><td>
 <!-- "Login" button-->
 <div id="loginButton">
 <form action="index.php" method="GET">
@@ -54,8 +58,10 @@
 	<input type="hidden" name="ac" value="login">
     <input type="submit" value="Login">
 </form>
-</div>
+</div></td></tr>
+
 <!-- Entry list -->
+<tr><td>
 <div id="list">
     <b class="listTitle">Entry list</b><br>
     <?php 
@@ -74,6 +80,7 @@
     <?php
     }
     ?>
+</div></td></tr>
 </div>
 
 

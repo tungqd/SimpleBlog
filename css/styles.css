@@ -77,12 +77,18 @@ color: blue;
 font-size: 25px;
 color: #617f10;
 }
-#entryList {
-float: right;
-}
 
 #addComment {
 float:left;
 }
+
+#right {
+float: right;
+}
+#loginButton, #logoutButton, #addEntryButton {
+float:right;
+margin: 5px 20px;
+}
+
 
 

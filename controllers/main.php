@@ -41,6 +41,9 @@ function mainController(){
 			updateAllEntries();
 			$_SESSION["view"] = "loggedin";
 		}
+		else {
+			$_SESSION["view"] = "loggedin";
+		}
 	}
 	else {
 		$_SESSION["view"] = "notloggedin";

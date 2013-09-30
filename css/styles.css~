@@ -107,7 +107,7 @@ float:left;
 width:100%;
 }
 
-.LoginScreenView {
+.wrapper {
 color: #333; 
 width:650px;
 border: 2px solid #d4d4d4;
@@ -131,11 +131,20 @@ height: 100px;
 text-align: center;
 line-height: 90px;
 vertical-align: middle;
+overflow: hidden;
 }
 
-#LoginScreenView {
+#LoginArea {
+width: 500px;
+float: left;
+}
+
+#CancelButton {
 float:left;
 }
+
+
+
 
 
 

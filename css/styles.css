@@ -21,6 +21,7 @@ font-family:Lucida Sans Unicode;
 font-size: 20px;
 border-style:inset;
 overflow:hidden;
+box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
 form.blogViewComment{
@@ -55,6 +56,7 @@ float:right;
 text-align: left;
 font-family:"Helvetica Neue", Helvetica;
 font-size: 16px;
+box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
 .blogTitle {
@@ -91,5 +93,7 @@ float:right;
 margin: 5px 20px;
 }
 
-
+#entryList {
+width:100%;
+}
 

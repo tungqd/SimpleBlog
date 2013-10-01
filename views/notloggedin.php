@@ -1,4 +1,3 @@
-
 <div id="newestEntry">
 	<div id="newestBlog">
 	<table>

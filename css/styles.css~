@@ -81,27 +81,17 @@ font-size: 25px;
 color: #617f10;
 }
 
-#addComment {
+#addComment, #deleteCommentButton, #commentLine {
 float:left;
 }
 
-#right {
+.right {
 float: right;
 }
 #loginButton, #logoutButton, #addEntryButton {
 float:right;
 margin: 5px 20px;
 }
-
-
-#commentLine{
-float: left;
-}
-
-#deleteCommentButton {
-float:left;
-}
-
 
 #entryList {
 width:100%;
@@ -149,7 +139,27 @@ overflow:hidden;
 box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
+#newEnrtyTextArea{
+rows:4;
+cols:50;
+}
 
+#newestBlog{
 
-
+}
+.blogTitle {
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+height:100px;
+}
+.blogContent {
+position: absolute;
+top:100px;
+left:0;
+right:0;
+bottom:0;
+}
 

@@ -1,4 +1,3 @@
-
 <form id="addNewEntry" name="addEntry" action="index.php?c=blog" id="addBlog" method="POST">
 		<input type="hidden" name="ac" value="addEntry">
 		<input type="hidden" name="e" value="<?php echo time(); ?>">

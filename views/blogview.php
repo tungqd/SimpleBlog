@@ -1,4 +1,3 @@
-
 <div id="entryView">
 	<div id="blogViewNewest">
     	<table>

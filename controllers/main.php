@@ -18,14 +18,13 @@ include("./models/entry_model.php");
 */
 function mainController()
 {
-	global $data;
-	
+	global $data;	
 	updateAllEntries();
 	//Add a comment
 	if (isset($_POST["ac"]) && $_POST["ac"] == "addComment") {
 		addAComment($_POST["e"], $_POST["t"], $_POST["name"], $_POST["comment"]);
 		updateAllEntries();
-		$_SESSION["view"] = "blogview";
+		$_SESSION["view"] = $_POST["view"];
 		$_GET["e"] = $_POST["e"];
 	}
 	else if (isset($_SESSION["loggedIn"])) {
@@ -33,9 +32,9 @@ function mainController()
 		if (isset($_GET["ac"]) && $_GET["ac"] == "deleteComment") {
 			deleteAComment($_GET["ei"], $_GET["ci"]);
 			updateAllEntries();
-			$_SESSION["view"] = "blogview";
+			$_SESSION["view"] = $_GET["view"];
 			$_GET["e"] = $_GET["ei"];
-		}
+			}
 		//Delete an entry
 		else if (isset($_GET["ac"]) && $_GET["ac"] == "deleteEntry") {
 			deleteAnEntry($_GET["e"]);

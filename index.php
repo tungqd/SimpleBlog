@@ -51,37 +51,6 @@ function blog()
 	blogController();
 	displayView($_SESSION['view']);
 }
-
-//displayView renders and displays specific view
-function displayView($viewname)
-{
-?>
-<!DOCTYPE html  PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" >
-<head>
-<title>Simple Blog - <?php echo $viewname?></title>
-<meta name="Authors" content="Tung Dang, Loc Dang, Khanh Nguyen" />
-<meta name="description" content="Simple blog using MVC pattern for HW2 CS174" />
-<meta name="keywords" content="HW2, blog, MVC" />
-<meta charset="utf-8" />
-<meta name="ROBOTS" content="NOINDEX, NOFOLLOW"/>
-<link rel="stylesheet" type="text/css" href="<?php echo BASEURL;?>css/styles.css" />
-<link rel="shortcut icon" href="favicon.ico"/>
-</head>
-<body>
-	
-	<?php 
-		global $data;
-		require_once("./views/{$viewname}.php"); 
-	?>
-
-</body>
-</html>
-<?php
-}
-
 /*
 * This function render entry at index $i from $list_items and returns an array
 *
@@ -115,5 +84,34 @@ function entry_drawer($list_items, $i)
        	$blog_entry[] = ($comments);
     }
     return $blog_entry; 
+}
+//displayView renders and displays specific view
+function displayView($viewname)
+{
+?>
+<!DOCTYPE html  PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Simple Blog - <?php echo $viewname?></title>
+<meta name="Authors" content="Tung Dang, Loc Dang, Khanh Nguyen" />
+<meta name="description" content="Simple blog using MVC pattern for HW2 CS174" />
+<meta name="keywords" content="HW2, blog, MVC" />
+<meta charset="utf-8" />
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW"/>
+<link rel="stylesheet" type="text/css" href="<?php echo BASEURL;?>css/styles.css" />
+<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body>
+	
+	<?php 
+		global $data;
+		require_once("./views/{$viewname}.php"); 
+	?>
+
+</body>
+</html>
+<?php
 }
 ?>

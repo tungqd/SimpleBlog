@@ -12,9 +12,9 @@ body {
 #newestEntry, #entryView {
 /*height:300px;*/
 color: #333; 
-width:650px;
-border: 2px solid #d4d4d4;
+width:600px;
 background-image: linear-gradient( #ffffff , #e5eecc 100px);
+border: 2px solid #d4d4d4;
 float:left;
 font-family:Lucida Sans Unicode;
 font-size: 20px;
@@ -26,7 +26,7 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 form.blogViewComment{
     display: inline;
 }
-#newestBlog, #blogViewNewest {
+#newestBlogEntry, #blogEntry {
 
 font-size: 110%;
 font-family: "courier new";

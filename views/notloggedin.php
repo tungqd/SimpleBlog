@@ -41,16 +41,16 @@
     		$title = $data[$i][0][0];  
     ?>
     
-    <!-- Loop to display list of entries -->
-    <form action="index.php" method="GET">
-		<input type="hidden" name="c" value="blog">
-		<input type="hidden" name="view" value="blogview">
-		<input type="hidden" name="ac" value="displayEntry">
-		<input type="hidden" name="e" value="<?php echo $i ?>">
-    	<input type="submit" value="<?php echo $title ?>">
-	</form>
+    	<!-- Loop to display list of entries -->
+    	<form action="index.php" method="GET">
+			<input type="hidden" name="c" value="blog">
+			<input type="hidden" name="view" value="blogview">
+			<input type="hidden" name="ac" value="displayEntry">
+			<input type="hidden" name="e" value="<?php echo $i ?>">
+    		<input type="submit" value="<?php echo $title ?>">
+		</form>
     <?php
-    }
+    	}
     ?>
 </div></td></tr>
 </table>

@@ -16,7 +16,8 @@ include("./models/entry_model.php");
 * mainController reads data from entries folder then processes the data
 *
 */
-function mainController(){
+function mainController()
+{
 	global $data;
 	
 	updateAllEntries();
@@ -53,21 +54,24 @@ function mainController(){
 * This function adds a comment
 *
 */
-function addAComment($index, $timestamp, $name, $comment) {		
+function addAComment($index, $timestamp, $name, $comment) 
+{		
 	addComment($index, $timestamp, $name, $comment);
 }
 /**
 * This function delete a comment
 *
 */
-function deleteAComment($entryi, $commenti) {
+function deleteAComment($entryi, $commenti) 
+{
 	deleteComment($entryi, $commenti);
 }
 /**
 * This function deletes an entry from the list
 *
 */
-function deleteAnEntry($i) {
+function deleteAnEntry($i)
+{
 	deleteEntry($i);
 }
 ?>

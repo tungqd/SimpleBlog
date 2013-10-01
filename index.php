@@ -31,25 +31,30 @@ else{
 //function pointer to call the controller
 $controller();
 
-function main(){
+function main()
+{
 	require_once($BASEURL."controllers/main.php");
 	mainController();
 	displayView($_SESSION['view']);
 }
-function login(){
+
+function login()
+{
 	require_once($BASEURL."controllers/login.php");
 	loginController();
 	displayView($_SESSION['view']);
 }
 
-function blog(){
+function blog()
+{
 	require_once($BASEURL."controllers/blog.php");
 	blogController();
 	displayView($_SESSION['view']);
 }
 
 //displayView renders and displays specific view
-function displayView($viewname){
+function displayView($viewname)
+{
 ?>
 <!DOCTYPE html  PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -76,11 +81,13 @@ function displayView($viewname){
 </html>
 <?php
 }
+
 /*
 * This function render entry at index $i from $list_items and returns an array
 *
 */
-function entry_drawer($list_items, $i) {
+function entry_drawer($list_items, $i) 
+{
 	$entry = $list_items[$i];//Assign the latest entry into $mostRecentEntry       	
     //Blog array has title and several lines of content
     $blog = $entry[0]; 
@@ -88,15 +95,13 @@ function entry_drawer($list_items, $i) {
     $blog_content = "";	
     	
     /* Add and append content to $blog_content through loop */
-    for ($i = 1; $i < count($blog); $i++)    	
-	{		
+    for ($i = 1; $i < count($blog); $i++){		
 		$blog_content .= $blog[$i] . "<br>";
     }
     $blog_entry = array($title, $blog_content);
     
     /* Array of comments */
-    for ($i = 1; $i < count($entry); $i++)
-    {
+    for ($i = 1; $i < count($entry); $i++){
     	$comment_array = $entry[$i];
     	$comment_name = $comment_array[0];
     	$comment_content = "";

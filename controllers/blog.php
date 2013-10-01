@@ -10,7 +10,8 @@
 */
 include ("./models/entry_model.php");
 
-function blogController(){	
+function blogController()
+{	
 	updateAllEntries();
 	
 	//display a blog entry
@@ -26,15 +27,14 @@ function blogController(){
 	//Add new entry screen
 	else {
 		$_SESSION['view'] = "addnew";	
-	}
-	
-		
+	}	
 }
 /**
 * This function adds a blog entry
 *
 */
-function addBlogPost($timestamp, $title, $content) {
+function addBlogPost($timestamp, $title, $content) 
+{
 	addEntry($timestamp, $title, $content);
 }
 	

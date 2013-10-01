@@ -18,12 +18,10 @@ function addEntry($timestamp, $title, $content)
 {
 
 	$folder = "./entries/" . $timestamp; //Create folder name for each entry
-	if (!file_exists($folder)) 
-	{
+	if (!file_exists($folder)) {
     		mkdir($folder, 0777);
   	}
-  	else
-  	{
+  	else{
   		return false;
   	}
   	
@@ -60,10 +58,8 @@ function getAnEntry($entryTimestamp)
 	$data = array($blog); //Array of data to be returned
 	$comments = getDirEntries($path);
 	arsort($comments);
-	foreach($comments as $commentTimestamp)
-	{
-		if ($commentTimestamp != "blog.txt")
-		{
+	foreach($comments as $commentTimestamp){
+		if ($commentTimestamp != "blog.txt"){
 			$content = file($path . "/$commentTimestamp");
 			$data[] = $content;
 		}	
@@ -81,8 +77,7 @@ function getAllEntries()
 	$entries = getDirEntries($path);
 	arsort($entries);
 	$data = array();
-	foreach($entries as $entry)
-	{
+	foreach($entries as $entry){
 		$data[] = getAnEntry($entry);
 	}
 	return $data;
@@ -128,8 +123,7 @@ function deleteEntry($index)
 	rsort($entries);
 	$path = $path . "/{$entries[$index]}";
 	$files = getDirEntries($path);
-	foreach($files as $file)
-	{
+	foreach($files as $file){
 		unlink($path . "/$file");
 	} 
 	unlink ($path. "/blog.txt");
@@ -144,19 +138,15 @@ Return an array of all entries or false if can't open the directory
 function getDirEntries($path)
 {
 	$entries = array();
-	if ($handle = opendir($path)) 
-	{
-    		while (false !== ($entry = readdir($handle))) 
-    		{
-        		if ($entry != "." && $entry != ".." && $entry != ".DS_Store" && $entry != "blog.txt") 
-        		{
+	if ($handle = opendir($path)) {
+    		while (false !== ($entry = readdir($handle))) {
+        		if ($entry != "." && $entry != ".." && $entry != ".DS_Store" && $entry != "blog.txt") {
             		$entries[] = $entry;
         		}
     		}
     		closedir($handle);
 	}
-	else 
-	{
+	else {
 		return false;
 	}
 	return $entries;

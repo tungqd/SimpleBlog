@@ -51,32 +51,33 @@
 <?php 
 if (!isset($_SESSION["loggedIn"])) {
 ?>
-
-<div id="loginButton">
-<!-- "Login" button-->
-<form action="index.php" method="GET">
-	<input type="hidden" name="c" value="login">
-	<input type="hidden" name="view" value="loginscreen">
-	<input type="hidden" name="ac" value="login">
-    <input type="submit" value="Login">
-</form>
-</div>
+	<div id="loginButton">
+	<!-- "Login" button-->
+	<form action="index.php" method="GET">
+		<input type="hidden" name="c" value="login">
+		<input type="hidden" name="view" value="loginscreen">
+		<input type="hidden" name="ac" value="login">
+    	<input type="submit" value="Login">
+	</form>
+	</div>
 <?php
-} else { 
+} 
+else { 
 ?>
-<div id="logoutButton">
-<!-- "Logout" button -->
-<form action="index.php" method="GET">
-	<input type="hidden" name="c" value="login">
-	<input type="hidden" name="view" value="notloggedin">
-	<input type="hidden" name="ac" value="logout">
-    <input type="submit" value="Logout">
-</form>
-</div></td></tr>
+	<div id="logoutButton">
+	<!-- "Logout" button -->
+	<form action="index.php" method="GET">
+		<input type="hidden" name="c" value="login">
+		<input type="hidden" name="view" value="notloggedin">
+		<input type="hidden" name="ac" value="logout">
+    	<input type="submit" value="Logout">
+	</form>
+	</div></td></tr>
 <?php 
 } 
 ?>
 </div>
+
 <div id="addComment">
 <tr><td>
     <!-- Add comment section -->

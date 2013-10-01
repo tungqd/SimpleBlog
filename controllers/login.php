@@ -9,7 +9,8 @@
 *
 */
 require_once "./models/authenticate.php";
-function loginController(){
+function loginController()
+{
 	global $data;	
     include ('./models/entry_model.php');
 	//Login form is submitted
@@ -22,7 +23,8 @@ function loginController(){
      		setSessionVariable(); 
 			updateAllEntries();
           	$_SESSION["view"]=("loggedin");
-     	} else { 
+     	} 
+     	else { 
 			$_SESSION["Usage"] = ("error");
           	$_SESSION["view"]=("loginscreen");
      	}

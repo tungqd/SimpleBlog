@@ -16,11 +16,11 @@ define ("BASEURL", 'http://'.$path.'/SimpleBlog/');
 * This function update $data when change is made
 * return $data
 */
-function updateAllEntries() {
+function updateAllEntries() 
+{
 	global $data;
 	$data = getAllEntries();
 }
-
 
 ?>
 

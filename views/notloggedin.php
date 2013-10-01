@@ -81,14 +81,15 @@
 <div id="list">
     <b class="listTitle">Entry list</b><br>
     <?php 
+    	/* Loop to display list of entries */
     	for ($i=0; $i < count($data); $i++) {
     		$title = $data[$i][0][0];  
     ?>
     
-<a href="index.php&c=blog&view=blogview&ac=displayEntry&e=<?php echo $i ?>"><?php echo $title ?></a>
+<a href="index.php?c=blog&view=blogview&ac=displayEntry&e=<?php echo $i; ?>"><?php echo $title ?></a>
 <br>
-    	   	    	<!-- Loop to display list of entries -->
-    <!--	<form action="index.php" method="GET">
+    	   	    	
+  <!--  	<form action="index.php" method="GET">
 			<input type="hidden" name="c" value="blog">
 			<input type="hidden" name="view" value="blogview">
 			<input type="hidden" name="ac" value="displayEntry">

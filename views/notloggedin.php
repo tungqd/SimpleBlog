@@ -85,7 +85,8 @@
     		$title = $data[$i][0][0];  
     ?>
     
-<a href="index.php&c=blog&view=blogView&ac=displayEntry#&e=<?php echo $i ?>"><?php echo $title ?></a>
+<a href="index.php&c=blog&view=blogview&ac=displayEntry&e=<?php echo $i ?>"><?php echo $title ?></a>
+<br>
     	   	    	<!-- Loop to display list of entries -->
     <!--	<form action="index.php" method="GET">
 			<input type="hidden" name="c" value="blog">

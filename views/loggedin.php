@@ -97,13 +97,14 @@
     <table>
     	<tr><td>
     	<div id="entryList">
-   		<form action="index.php" method="GET">  		
+    	<a href="index.php"><?php echo $title ?></a>
+   <!--		<form action="index.php" method="GET">  		
 			<input type="hidden" name="c" value="blog">
 			<input type="hidden" name="view" value="blogview">
 			<input type="hidden" name="ac" value="displayEntry">
 			<input type="hidden" name="e" value="<?php echo $i ?>">
     		<input type="submit" value="<?php echo $title ?>"> 		
-    	</form>
+    	</form>-->
     	</div></td>
 	<?php if ($i !== count($data)-1) { ?>
 		<td>

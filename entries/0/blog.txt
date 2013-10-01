@@ -1,5 +1,3 @@
-This is our first project
-This is project is hard
-Bla bla blas
-fhsyhfshsh
-tj8uehguguru
+This is our Simple Blog project
+This is project is hard.
+The blog should support an initial front page view of the most recent blog entry. This page has a right side element with a list of entry titles ordered from most recent to oldest.

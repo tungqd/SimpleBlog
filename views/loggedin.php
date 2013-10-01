@@ -97,7 +97,7 @@
     <table>
     	<tr><td>
     	<div id="entryList">
-    	<a href="index.php"><?php echo $title ?></a>
+    	<a href="index.php&c=main&view=blogView&ac=displayEntry#&e=<?php echo $i ?>"><?php echo $title ?></a>
    <!--		<form action="index.php" method="GET">  		
 			<input type="hidden" name="c" value="blog">
 			<input type="hidden" name="view" value="blogview">

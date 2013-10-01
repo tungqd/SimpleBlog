@@ -94,7 +94,7 @@ function displayView($viewname)
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
-<title>Simple Blog - <?php echo $viewname?></title>
+<title><?php echo $viewname?>-<?php echo SITENAME;?></title>
 <meta name="Authors" content="Tung Dang, Loc Dang, Khanh Nguyen" />
 <meta name="description" content="Simple blog using MVC pattern for HW2 CS174" />
 <meta name="keywords" content="HW2, blog, MVC" />

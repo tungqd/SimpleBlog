@@ -1,3 +1,4 @@
+<h1>Blog View- <a href=index.php><?php echo SITENAME?></a></h1>
 <div id="entryView">
 	<div id="blogEntry">
     	<table>

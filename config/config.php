@@ -8,10 +8,8 @@
 *
 *
 */
-$path = $_SERVER['SERVER_NAME'];
-define ("BASEURL", 'http://'.$path.'/CS174/HW2/');
-
-//require_once ('./models/authenticate.php');
+define ("BASEURL", 'http://localhost/CS174/HW2/');
+define ("SITENAME", "Simple Blog");
 /**
 * This function update $data when change is made
 * return $data

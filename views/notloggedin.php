@@ -1,3 +1,4 @@
+<h1>Main Page - <a href=index.php><?php echo SITENAME?></a></h1>
 <div id="newestEntry">
 	<div id="newestBlogEntry">
     	<table>

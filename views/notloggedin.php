@@ -86,7 +86,9 @@
     		$title = $data[$i][0][0];  
     ?>
     
-<a href="index.php?c=blog&view=blogview&ac=displayEntry&e=<?php echo $i; ?>"><?php echo $title ?></a>
+<a href="index.php?c=blog&view=blogview&ac=displayEntry&e=<?php echo $i; ?>">
+<?php echo $title ?>
+</a>
 <br>
     	   	    	
   <!--  	<form action="index.php" method="GET">

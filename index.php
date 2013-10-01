@@ -11,7 +11,7 @@
 session_start();
 
 require_once('./config/config.php');
-
+$base = BASEURL;
 // there are 3 controllers
 $controllers_available= array('main','login','blog');
 
@@ -33,21 +33,21 @@ $controller();
 
 function main()
 {
-	require_once($BASEURL."controllers/main.php");
+	require_once($base."controllers/main.php");
 	mainController();
 	displayView($_SESSION['view']);
 }
 
 function login()
 {
-	require_once($BASEURL."controllers/login.php");
+	require_once($base."controllers/login.php");
 	loginController();
 	displayView($_SESSION['view']);
 }
 
 function blog()
 {
-	require_once($BASEURL."controllers/blog.php");
+	require_once($base."controllers/blog.php");
 	blogController();
 	displayView($_SESSION['view']);
 }

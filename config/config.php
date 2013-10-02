@@ -8,7 +8,7 @@
 *
 *
 */
-define ("BASEURL", 'http://localhost/SimpleBlog/');
+define ("BASEURL", 'http://localhost/Hw2/');
 define ("SITENAME", "Simple Blog");
 /**
 * This function update $data when change is made

@@ -32,21 +32,26 @@ $controller();
 
 function main()
 {
-	require_once(defined($BASEURL)."controllers/main.php");
+	//global $BASEURL;
+	//$base = echo BASEURL;
+	//require_once(defined($BASEURL)."controllers/main.php");
+	require_once("./controllers/main.php");
 	mainController();
 	displayView($_SESSION['view']);
 }
 
 function login()
 {
-	require_once(defined($BASEURL)."controllers/login.php");
+	//global $BASEURL;
+	require_once("./controllers/login.php");
 	loginController();
 	displayView($_SESSION['view']);
 }
 
 function blog()
 {
-	require_once(defined($BASEURL)."controllers/blog.php");
+	//global $BASEURL;
+	require_once("./controllers/blog.php");
 	blogController();
 	displayView($_SESSION['view']);
 }

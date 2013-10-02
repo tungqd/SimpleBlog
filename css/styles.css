@@ -13,7 +13,9 @@ body {
 /*height:300px;*/
 color: #333; 
 width:600px;
-background-image: linear-gradient( #ffffff , #e5eecc 100px);
+background-image: -webkit-linear-gradient( #ffffff , #e5eecc 100px);
+background-image: -moz-linear-gradient( #ffffff , #e5eecc 100px);
+
 border: 2px solid #d4d4d4;
 float:left;
 font-family:Lucida Sans Unicode;
@@ -100,7 +102,8 @@ width:100%;
 color: #333; 
 width:650px;
 border: 2px solid #d4d4d4;
-background-image: linear-gradient( #ffffff , #e5eecc 100px);
+background-image: -webkit-linear-gradient( #ffffff , #e5eecc 100px);
+background-image: -moz-linear-gradient( #ffffff , #e5eecc 100px);
 float:left;
 font-family:Lucida Sans Unicode;
 font-size: 20px;
@@ -112,7 +115,8 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 .LoginHeader {
 font-size: 40px;
 font-style: bold;
-background-image: linear-gradient(left, white, gray);
+background-image: -webkit-linear-gradient(left, white, gray);
+background-image: -moz-linear-gradient(left, white, gray);
 width:650px;
 height: 100px;
 text-align: center;
@@ -126,7 +130,8 @@ overflow: hidden;
 color: #333; 
 width:650px;
 border: 2px solid #d4d4d4;
-background-image: linear-gradient( #ffffff , #e5eecc 100px);
+background-image: -webkit-linear-gradient( #ffffff , #e5eecc 100px);
+background-image: -moz-linear-gradient( #ffffff , #e5eecc 100px);
 float:left;
 font-family:Lucida Sans Unicode;
 font-size: 20px;

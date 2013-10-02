@@ -1,11 +1,12 @@
 <h1 class="LoginHeader">Login Page - <a href=index.php><?php echo SITENAME?></a></h1>
-<?php /* handle invalid input*/
-if (isset($_SESSION["Usage"]) && $_SESSION["Usage"] == "error") {
-	echo "Invalid username/password. Please try again";
-}
-?>
+
 
 <div class="wrapper">
+	<?php /* handle invalid input*/
+		if (isset($_SESSION["Usage"]) && $_SESSION["Usage"] == "error") {
+		echo "Invalid username/password. Please try again";
+	}
+	?>
 
 	<div id="LoginArea">
 

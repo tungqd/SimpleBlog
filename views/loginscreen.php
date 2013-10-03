@@ -5,7 +5,7 @@
 	<?php /* handle invalid input*/
 		if (isset($_SESSION["Usage"]) && $_SESSION["Usage"] == "error") {
 		echo "Invalid username/password. Please try again";
-	}
+		}
 	?>
 
 	<div id="LoginArea">
